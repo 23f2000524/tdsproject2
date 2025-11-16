@@ -12,13 +12,15 @@ import httpx
 {
   "email": "your email", // Student email ID
   "secret": "your secret", // Student-provided secret
-  "url": "https://example.com/quiz-834" // A unique task URL
+  "url": "http://tds-llm-analysis.s-anand.net/submit" // A unique task URL
 }
 '''
 payload={
-    "email": "hehe@gmail.com", 
+  "email": "hehe@gmail.com", 
   "secret": "secret", 
-  "url": "https://example.com/quiz-834" 
+  "url": "http://tds-llm-analysis.s-anand.net/demo",
+  "answer": "anything you want"
+
 
 }
 
