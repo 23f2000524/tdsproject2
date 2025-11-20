@@ -18,7 +18,7 @@ import httpx
 payload={
   "email": "hehe@gmail.com", 
   "secret": "secret", 
-  "url": "http://tds-llm-analysis.s-anand.net/demo",
+  "url": "https://books.toscrape.com/",
   "answer": "anything you want"
 
 
