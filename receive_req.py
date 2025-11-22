@@ -10,7 +10,7 @@
 #   "playwright"
 # ]
 # ///
-import re
+
 import os
 import asyncio
 import json
@@ -23,6 +23,7 @@ from dotenv import load_dotenv
 import httpx
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+import re
 
 load_dotenv()
 
@@ -186,7 +187,7 @@ def scrape_dynamic_page_with_playwright(url: str) -> dict:
                 try:
                     html_content = await page.content()
                     print(f"HTML content extracted, size: {len(html_content)} bytes")
-                    print(f"Sample of rendered content: {html_content[1000:1500]}")
+                    print(f"Sample of rendered content: {html_content}")
                 except Exception as e:
                     print(f"Error getting page content: {e}")
                 
@@ -237,7 +238,6 @@ def extract_page_content(html: str, url: str) -> dict:
             'buttons': [],
             'tables': [],
             'divs_with_data': [],
-            'dynamic_content': [],
             'raw_text': ''
         }
     
@@ -265,7 +265,6 @@ def extract_page_content(html: str, url: str) -> dict:
         'buttons': [],
         'tables': [],
         'divs_with_data': [],
-        'dynamic_content': [],
         'raw_text': ''
     }
     
@@ -376,26 +375,6 @@ def extract_page_content(html: str, url: str) -> dict:
         print(f"Extracted {len(content['tables'])} tables")
     except Exception as e:
         print(f"Error extracting tables: {e}")
-    
-    try:
-        quote_patterns = ['span.text', '.quote', '[class*="quote"]', '[class*="item"]', '[data-*]']
-        for div in soup.find_all('div'):
-            div_classes = ' '.join(div.get('class', []))
-            div_id = div.get('id', '')
-            div_text = div.get_text(strip=True)[:500]
-            
-            if ('quote' in div_classes.lower() or 'quote' in div_id.lower() or 
-                'item' in div_classes.lower() or len(div_text) > 50):
-                content['dynamic_content'].append({
-                    'class': div_classes,
-                    'id': div_id,
-                    'text': div_text
-                })
-        
-        if content['dynamic_content']:
-            print(f"Extracted {len(content['dynamic_content'])} dynamic content blocks")
-    except Exception as e:
-        print(f"Error extracting dynamic content: {e}")
     
     try:
         for div in soup.find_all('div', attrs={'data-*': True}):
@@ -516,128 +495,242 @@ def handle_scraper_tool(url: str) -> str:
 # ============ MAIN PROCESSING FUNCTION ============
 
 async def process_request(data):
-    """Process the incoming request by scraping the quiz and generating a solution."""
+    """Process the incoming request by solving quiz chain."""
     
     email = data.get("email")
     secret = data.get("secret")
-    quiz_url = data.get("url")
+    initial_url = data.get("url")
     
-    print(f"Starting to process request for: {email}")
-    print(f"Quiz URL: {quiz_url}")
+    print(f"Starting quiz chain for: {email}")
+    print(f"Initial URL: {initial_url}")
+    
+    quiz_count = 0
+    max_quizzes = 10
+    start_time = asyncio.get_event_loop().time()
+    timeout_seconds = 180
+    
+    base_url = "https://tds-llm-analysis.s-anand.net"
+    current_url = initial_url if initial_url.startswith("http") else f"{base_url}{initial_url}"
     
     try:
-        # Step 1: Scrape the quiz page
-        print("Step 1: Scraping quiz page...")
-        scrape_result = scrape_url(quiz_url)
-        
-        if scrape_result['status'] != 'success':
-            print(f"Error scraping URL: {scrape_result.get('error')}")
-            return
-        
-        quiz_content = scrape_result['data']
-        print("Quiz content scraped successfully")
-        
-        # Step 2: Use LLM to generate a Python script that solves the quiz
-        print("Step 2: Generating solution script with LLM...")
-        
-        prompt_for_llm = f"""
-You are an intelligent quiz solver. You have been given the following quiz content from URL: {quiz_url}
-
-Quiz Content:
-{json.dumps(quiz_content, indent=2)}
-
-Based on the quiz content above, generate a STANDALONE PYTHON SCRIPT that:
-1. Uses httpx to fetch the quiz page at {quiz_url}
-2. Extracts the quiz question and any required information
-3. Generates an appropriate answer using an LLM API call to {AIPIPE_URL}
-4. Submits the answer to the submission endpoint (usually /submit endpoint found on the page)
-5. Include necessary headers, authentication, and error handling
-
-Important constraints:
-- The script must use httpx library
-- Include the AIPIPE_TOKEN for LLM authentication
-- Make the script fully functional and standalone
-- Extract and use the submission endpoint URL from the page content
-- Handle JSON formatting properly
-- Output ONLY the Python code, no explanations or markdown
-
-Here's the AIPIPE token to use: {AIPIPE_TOKEN}
-"""
-        
-        llm_response = httpx.post(
-            AIPIPE_URL,
-            headers={
-                "accept": "*/*",
-                "authorization": f"Bearer {AIPIPE_TOKEN}",
-                "content-type": "application/json",
-            },
-            json={
-                "model": "openai/gpt-4-turbo",
-                "max_tokens": 2000,
-                "messages": [
-                    {"role": "system", "content": "You are an expert Python developer who solves online quizzes. Generate only clean, executable Python code."},
-                    {"role": "user", "content": prompt_for_llm}
-                ]
-            },
-            timeout=60.0
-        )
-        
-        llm_response_json = llm_response.json()
-        code_to_run = llm_response_json.get("choices", [])[0].get('message', {}).get('content', '')
-        
-        if not code_to_run:
-            print("Error: No code generated by LLM")
-            return
-        
-        print("Generated code:")
-        print(code_to_run)
-        
-        # Step 3: Execute the generated code
-        print("Step 3: Executing generated script...")
-        
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
-            f.write(code_to_run)
-            temp_file = f.name
-        
-        try:
-            complete = subprocess.run(
-                ["python3", temp_file],
-                capture_output=True,
-                env=os.environ.copy(),
-                timeout=30
-            )
+        while quiz_count < max_quizzes:
+            elapsed = asyncio.get_event_loop().time() - start_time
+            if elapsed > timeout_seconds:
+                print(f"Timeout: Exceeded 3 minutes ({timeout_seconds}s)")
+                break
             
-            stdout = complete.stdout.decode('utf-8', errors='ignore')
-            stderr = complete.stderr.decode('utf-8', errors='ignore')
+            print(f"\n{'='*60}")
+            print(f"Quiz #{quiz_count + 1}")
+            print(f"Current URL: {current_url}")
+            print(f"{'='*60}")
             
-            print("Script execution completed")
-            if stdout:
-                print(f"Output: {stdout}")
-            if stderr:
-                print(f"Errors: {stderr}")
-        
-        finally:
-            os.unlink(temp_file)
-        
-        # Step 4: Send confirmation to submission endpoint
-        print("Step 4: Sending confirmation...")
-        
-        response = httpx.post(
-            'http://tds-llm-analysis.s-anand.net/submit',
-            json={
+            print("Step 1: Posting initial request to /submit...")
+            
+            payload = {
                 'email': email,
                 'secret': secret,
-                'url': quiz_url,
-                'answer': 'Quiz completed'
+                'url': current_url,
+                'answer': 'start'
             }
-        )
+            
+            print(f"Payload: {json.dumps(payload, indent=2)}")
+            
+            try:
+                submit_response = httpx.post(f"{base_url}/submit", json=payload, timeout=10)
+                submit_response.raise_for_status()
+                submit_response_json = submit_response.json()
+                
+                print(f"Response status: {submit_response.status_code}")
+                print(f"Response: {json.dumps(submit_response_json, indent=2)}")
+            except Exception as e:
+                print(f"Error posting to /submit: {e}")
+                break
+            
+            correct = submit_response_json.get('correct', False)
+            reason = submit_response_json.get('reason', '')
+            next_url = submit_response_json.get('url')
+            
+            if not next_url:
+                print("No URL provided in response. Quiz might be complete or error occurred.")
+                if reason:
+                    print(f"Reason: {reason}")
+                break
+            
+            print(f"Next URL to scrape: {next_url}")
+            
+            print("Step 2: Fetching the quiz page...")
+            
+            scrape_url_full = next_url if next_url.startswith("http") else f"{base_url}{next_url}"
+            
+            try:
+                headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+                page_response = httpx.get(scrape_url_full, headers=headers, timeout=10, follow_redirects=True)
+                page_response.raise_for_status()
+                page_html = page_response.text
+                print(f"Page fetched successfully, size: {len(page_html)} bytes")
+                print(f"Page content : {page_html}")
+                
+                check_dynamic = detect_dynamic_content(page_html)
+                if check_dynamic['is_dynamic'] or '<script>' in page_html.lower() or 'document.querySelector' in page_html.lower():
+                    print("JavaScript detected in page, using Playwright for rendering...")
+                    playwright_result = scrape_dynamic_page_with_playwright(scrape_url_full)
+                    if not playwright_result['error'] and playwright_result['html']:
+                        page_html = playwright_result['html']
+                        print(f"Playwright rendered page, size: {len(page_html)} bytes")
+                    else:
+                        print(f"Playwright failed: {playwright_result['error']}, using static HTML")
+            
+            except Exception as e:
+                print(f"Error fetching page: {e}")
+                break
+            
+            print("Step 3: Extracting answer from page...")
+            
+            scrape_result = extract_page_content(page_html, scrape_url_full)
+            
+            print("Step 4: Analyzing with LLM to extract answer...")
+            
+            prompt_for_llm = f"""
+You are an expert quiz solver. Your task is to analyze the quiz page and solve whatever task it presents.
+The folling are the data gathered from the page:
+PAGE URL: {scrape_url_full}
+
+PAGE TITLE: {scrape_result.get('title', 'N/A')}
+
+PAGE CONTENT:
+{scrape_result.get('raw_text', '')}
+
+HEADINGS:
+{json.dumps(scrape_result.get('headings', []), indent=2)}
+
+PARAGRAPHS:
+{json.dumps(scrape_result.get('paragraphs', []), indent=2)}
+
+LINKS:
+visit links and scrape the data present there
+{json.dumps(scrape_result.get('links', []), indent=2)}
+
+FORMS:
+{json.dumps(scrape_result.get('forms', []), indent=2)}
+
+BUTTONS:
+{json.dumps(scrape_result.get('buttons', []), indent=2)}
+
+RAW HTML (first 2000 chars):
+{page_html}
+
+TASK:
+The quiz page may ask you to:
+1. Extract a secret code or answer from the page
+2. Perform calculations or analysis on data shown
+3. Scrape information and process it
+4. Answer a question based on page content
+5. Follow instructions and provide the result
+6. Extract a specific value, number, string, or code
+7. Any other quiz-related task
+
+Analyze the page carefully and:
+1. Understand what the quiz is asking for
+2. Find all relevant information on the page
+3. Perform any required analysis or extraction
+4. Provide the answer in the exact format required
+
+IMPORTANT:
+- Look at ALL content on the page: text, headings, links, data, codes
+- The answer could be a number, string, code, or structured data
+- Return ONLY the final answer that should be submitted
+- Do NOT include explanations or instructions
+- Match the format requested (if asking for a number, return a number; if asking for a code, return the code as-is)
+- Be precise and exact
+
+RESPONSE:
+Return ONLY the answer, in the exact format needed. Nothing else."""
+            
+            llm_response = httpx.post(
+                AIPIPE_URL,
+                headers={
+                    "accept": "*/*",
+                    "authorization": f"Bearer {AIPIPE_TOKEN}",
+                    "content-type": "application/json",
+                },
+                json={
+                    "model": "openai/gpt-4-turbo",
+                    "max_tokens": 1000,
+                    "messages": [
+                        {"role": "system", "content": "You are an expert quiz solver. Analyze quiz pages and extract the required answer. Return ONLY the answer in the format required, nothing else."},
+                        {"role": "user", "content": prompt_for_llm}
+                    ]
+                },
+                timeout=60.0
+            )
+            
+            llm_response_json = llm_response.json()
+            llm_content = llm_response_json.get("choices", [])[0].get('message', {}).get('content', '').strip()
+            
+            if not llm_content:
+                print("Error: No response from LLM")
+                break
+            
+            answer = llm_content
+            
+            print(f"Extracted answer: {answer}")
+            
+            print("Step 5: Posting answer back to /submit...")
+            
+            answer_payload = {
+                'email': email,
+                'secret': secret,
+                'url': scrape_url_full,
+                'answer': answer
+            }
+            
+            print(f"Payload: {json.dumps(answer_payload, indent=2)}")
+            
+            try:
+                answer_response = httpx.post(f"{base_url}/submit", json=answer_payload, timeout=10)
+                answer_response.raise_for_status()
+                answer_response_json = answer_response.json()
+                
+                print(f"Response status: {answer_response.status_code}")
+                print(f"Response: {json.dumps(answer_response_json, indent=2)}")
+                
+                is_correct = answer_response_json.get('correct', False)
+                answer_reason = answer_response_json.get('reason', '')
+                answer_next_url = answer_response_json.get('url')
+                
+                if is_correct:
+                    print(f"✓ CORRECT!")
+                    quiz_count += 1
+                    
+                    if answer_next_url:
+                        print(f"Moving to next quiz...")
+                        current_url = answer_next_url
+                    else:
+                        print("Quiz chain complete!")
+                        break
+                else:
+                    print(f"✗ INCORRECT: {answer_reason}")
+                    
+                    if answer_next_url:
+                        print(f"Moving to next URL...")
+                        current_url = answer_next_url
+                        quiz_count += 1
+                    else:
+                        print("No next URL. Quiz ended.")
+                        break
+            
+            except Exception as e:
+                print(f"Error posting answer: {e}")
+                break
         
-        print(f"Finished request for: {email}")
-        print(f"Response status: {response.status_code}")
-        print(f"Response text: {response.text}")
+        print(f"\n{'='*60}")
+        print(f"Quiz chain ended. Completed {quiz_count} quizzes successfully.")
+        print(f"{'='*60}")
     
     except Exception as e:
         print(f"Error processing request: {str(e)}")
+        import traceback
+        traceback.print_exc()
 
 # ============ API ENDPOINTS ============
 

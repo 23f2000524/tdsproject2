@@ -16,9 +16,9 @@ import httpx
 }
 '''
 payload={
-  "email": "hehe@gmail.com", 
+  "email": "23f2000524@ds.study.iitm.ac.in", 
   "secret": "secret", 
-  "url": "https://quotes.toscrape.com/js/",
+  "url": "http://tds-llm-analysis.s-anand.net/demo",
   "answer": "anything you want"
 
 
