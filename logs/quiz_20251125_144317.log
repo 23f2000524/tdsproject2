@@ -1,0 +1,144 @@
+2025-11-25 14:43:17,611 - INFO - [<module>:57] - [INIT] Gemini API configured successfully
+2025-11-25 14:43:17,635 - INFO - [<module>:1275] - [START] Quiz Solver Service v6 - Gemini Edition
+2025-11-25 14:43:17,636 - INFO - [<module>:1276] - [START] GEMINI_API_KEY configured: True
+2025-11-25 14:43:17,636 - INFO - [<module>:1277] - [START] SECRET_KEY configured: True
+2025-11-25 14:43:17,636 - INFO - [<module>:1278] - [START] LLM Provider: Google Gemini 2.5 Pro
+2025-11-25 14:43:17,636 - INFO - [<module>:1279] - [START] Rate Limits: 15 req/min, 1M tokens/min, 1500 req/day
+2025-11-25 14:43:17,637 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-25 14:43:17,649 - INFO - [_serve:84] - Started server process [25452]
+2025-11-25 14:43:17,649 - INFO - [startup:48] - Waiting for application startup.
+2025-11-25 14:43:17,649 - INFO - [startup:62] - Application startup complete.
+2025-11-25 14:43:17,650 - INFO - [_log_started_message:216] - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-11-25 14:43:21,315 - INFO - [receive_request:1227] - [API] POST /receive_request
+2025-11-25 14:43:21,315 - INFO - [receive_request:1245] - [API] Valid request for 23f2000524@ds.study.iitm.ac.in
+2025-11-25 14:43:21,316 - INFO - [send:473] - 127.0.0.1:57586 - "POST /receive_request HTTP/1.1" 200
+2025-11-25 14:43:21,316 - INFO - [process_request:1180] - 
+======================================================================
+2025-11-25 14:43:21,316 - INFO - [process_request:1181] - [CHAIN] Starting for 23f2000524@ds.study.iitm.ac.in
+2025-11-25 14:43:21,316 - INFO - [process_request:1182] - [CHAIN] Initial URL: http://tds-llm-analysis.s-anand.net/demo
+2025-11-25 14:43:21,316 - INFO - [process_request:1183] - [CHAIN] Extended timeout: 300 seconds (5 minutes)
+2025-11-25 14:43:21,316 - INFO - [process_request:1184] - [CHAIN] Using Gemini 2.5 Pro
+2025-11-25 14:43:21,316 - INFO - [process_request:1185] - ======================================================================
+
+2025-11-25 14:43:21,316 - INFO - [process_request:1201] - [CHAIN] Quiz 1/10 | 0.0s elapsed | 300.0s remaining
+2025-11-25 14:43:21,316 - INFO - [process_quiz:1112] - [QUIZ] Starting: http://tds-llm-analysis.s-anand.net/demo
+2025-11-25 14:43:21,316 - DEBUG - [extract_url_params:78] - [CONTEXT] Extracted variables: {'EMAIL': '23f2000524@ds.study.iitm.ac.in'}
+2025-11-25 14:43:21,316 - INFO - [process_quiz:1117] - [QUIZ] ========== STEP 1: COMPREHENSIVE PAGE FETCH ==========
+2025-11-25 14:43:21,316 - INFO - [fetch_page_with_playwright:133] - [PLAYWRIGHT] Comprehensive fetch: http://tds-llm-analysis.s-anand.net/demo
+2025-11-25 14:43:21,771 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-25 14:43:21,925 - DEBUG - [_fetch:161] - [PLAYWRIGHT] Launching browser
+2025-11-25 14:43:22,503 - INFO - [_fetch:177] - [PLAYWRIGHT] Loading http://tds-llm-analysis.s-anand.net/demo
+2025-11-25 14:43:23,227 - DEBUG - [_fetch:179] - [PLAYWRIGHT] Page loaded, waiting for JS execution
+2025-11-25 14:43:28,252 - DEBUG - [_fetch:184] - [PLAYWRIGHT] HTML captured: 444 bytes
+2025-11-25 14:43:28,257 - DEBUG - [_fetch:187] - [PLAYWRIGHT] Rendered text: 202 chars
+2025-11-25 14:43:28,261 - DEBUG - [_fetch:198] - [PLAYWRIGHT] LocalStorage: 0 items
+2025-11-25 14:43:28,265 - DEBUG - [_fetch:211] - [PLAYWRIGHT] SessionStorage: 0 items
+2025-11-25 14:43:28,268 - DEBUG - [_fetch:216] - [PLAYWRIGHT] Cookies: 0 items
+2025-11-25 14:43:28,271 - DEBUG - [_fetch:226] - [PLAYWRIGHT] Scripts: 1 found
+2025-11-25 14:43:28,302 - INFO - [_fetch:232] - [PLAYWRIGHT] Browser closed, extraction complete
+2025-11-25 14:43:28,306 - INFO - [process_quiz:1129] - [QUIZ] ========== STEP 2: EXTRACT PAGE DATA ==========
+2025-11-25 14:43:28,306 - INFO - [extract_data:312] - [EXTRACT] Parsing page data
+2025-11-25 14:43:28,306 - DEBUG - [extract_data:341] - [EXTRACT] Found 0 links
+2025-11-25 14:43:28,307 - DEBUG - [extract_data:355] - [EXTRACT] Found 0 tables
+2025-11-25 14:43:28,307 - DEBUG - [extract_data:375] - [EXTRACT] Found 0 forms
+2025-11-25 14:43:28,307 - DEBUG - [extract_base64_content:275] - [EXTRACT] Searching for base64 encoded content
+2025-11-25 14:43:28,307 - DEBUG - [extract_file_metadata:290] - [EXTRACT] Extracting file metadata
+2025-11-25 14:43:28,307 - DEBUG - [extract_data:384] - [EXTRACT] Found 0 files
+2025-11-25 14:43:28,307 - DEBUG - [extract_base64_content:275] - [EXTRACT] Searching for base64 encoded content
+2025-11-25 14:43:28,307 - INFO - [process_quiz:1133] - [QUIZ] ========== STEP 3: LLM EXTRACTS URLS AND CONTENT ==========
+2025-11-25 14:43:28,307 - INFO - [llm_extract_urls:533] - [LLM_EXTRACT] ========== EXTRACTING URLS AND CONTENT ==========
+2025-11-25 14:43:28,307 - INFO - [llm_extract_urls:587] - [LLM_EXTRACT] Calling Gemini 2.5 Pro...
+2025-11-25 14:43:28,307 - DEBUG - [call_llm_gemini:401] - [GEMINI] Calling API with max_tokens=4000
+2025-11-25 14:43:28,307 - DEBUG - [call_llm_gemini:427] - [GEMINI] Attempt 1/6
+2025-11-25 14:43:28,307 - INFO - [call_llm_gemini:428] - [GEMINI] ⏳ Sending request to Gemini 2.5 Pro...
+2025-11-25 14:43:28,308 - INFO - [call_llm_gemini:437] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-25 14:43:43,309 - INFO - [call_llm_gemini:440] - [GEMINI] ✓ Received response from Gemini
+2025-11-25 14:43:43,309 - DEBUG - [call_llm_gemini:453] - [GEMINI] Response content length: 1307 chars
+2025-11-25 14:43:43,309 - INFO - [call_llm_gemini:454] - [GEMINI] Response (first 300 chars): ```json
+{
+  "important_content": "The page provides instructions to solve a challenge. The user must send a POST request to a specific URL with a JSON payload. The payload requires an email, a secret, the current URL, and an answer. The email is available in the context variables. The secret is ment
+2025-11-25 14:43:43,310 - DEBUG - [call_llm_gemini:459] - [GEMINI] Removed markdown code blocks
+2025-11-25 14:43:43,310 - DEBUG - [call_llm_gemini:465] - [GEMINI] Attempting to parse JSON response
+2025-11-25 14:43:43,310 - INFO - [call_llm_gemini:467] - [GEMINI] ✓ Successfully parsed JSON response
+2025-11-25 14:43:43,310 - DEBUG - [call_llm_gemini:468] - [GEMINI] Parsed keys: ['important_content', 'urls_to_visit', 'extracted_data']
+2025-11-25 14:43:43,310 - INFO - [llm_extract_urls:592] - [LLM_EXTRACT] ✓ Extracted 1 URLs to visit
+2025-11-25 14:43:43,310 - INFO - [llm_extract_urls:593] - [LLM_EXTRACT] Important content length: 374
+2025-11-25 14:43:43,310 - INFO - [process_quiz:1141] - [QUIZ] LLM identified 1 URLs to parse
+2025-11-25 14:43:43,310 - INFO - [process_quiz:1143] - [QUIZ] ========== STEP 4: PARSE ALL IDENTIFIED URLS ==========
+2025-11-25 14:43:43,310 - INFO - [parse_all_urls:599] - [PARSE_URLS] Parsing 1 URLs
+2025-11-25 14:43:43,310 - DEBUG - [substitute_variables:91] - [CONTEXT] Substituted 'http://tds-llm-analysis.s-anand.net/submit' -> 'http://tds-llm-analysis.s-anand.net/submit'
+2025-11-25 14:43:43,310 - INFO - [parse_all_urls:613] - [PARSE_URLS] [1/1] Parsing: http://tds-llm-analysis.s-anand.net/submit
+2025-11-25 14:43:43,311 - DEBUG - [parse_all_urls:614] - [PARSE_URLS] Reason: This is the submission endpoint where the final JSON payload must be sent via a POST request to complete the challenge.
+2025-11-25 14:43:43,311 - INFO - [fetch_page_with_playwright:133] - [PLAYWRIGHT] Comprehensive fetch: http://tds-llm-analysis.s-anand.net/submit
+2025-11-25 14:43:43,574 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-25 14:43:43,723 - DEBUG - [_fetch:161] - [PLAYWRIGHT] Launching browser
+2025-11-25 14:43:44,125 - INFO - [_fetch:177] - [PLAYWRIGHT] Loading http://tds-llm-analysis.s-anand.net/submit
+2025-11-25 14:43:44,701 - DEBUG - [_fetch:179] - [PLAYWRIGHT] Page loaded, waiting for JS execution
+2025-11-25 14:43:49,739 - DEBUG - [_fetch:184] - [PLAYWRIGHT] HTML captured: 191 bytes
+2025-11-25 14:43:49,744 - DEBUG - [_fetch:187] - [PLAYWRIGHT] Rendered text: 28 chars
+2025-11-25 14:43:49,751 - DEBUG - [_fetch:198] - [PLAYWRIGHT] LocalStorage: 0 items
+2025-11-25 14:43:49,754 - DEBUG - [_fetch:211] - [PLAYWRIGHT] SessionStorage: 0 items
+2025-11-25 14:43:49,756 - DEBUG - [_fetch:216] - [PLAYWRIGHT] Cookies: 0 items
+2025-11-25 14:43:49,760 - DEBUG - [_fetch:226] - [PLAYWRIGHT] Scripts: 0 found
+2025-11-25 14:43:49,788 - INFO - [_fetch:232] - [PLAYWRIGHT] Browser closed, extraction complete
+2025-11-25 14:43:49,792 - INFO - [extract_data:312] - [EXTRACT] Parsing page data
+2025-11-25 14:43:49,793 - DEBUG - [extract_data:341] - [EXTRACT] Found 0 links
+2025-11-25 14:43:49,793 - DEBUG - [extract_data:355] - [EXTRACT] Found 0 tables
+2025-11-25 14:43:49,793 - DEBUG - [extract_data:375] - [EXTRACT] Found 0 forms
+2025-11-25 14:43:49,793 - DEBUG - [extract_base64_content:275] - [EXTRACT] Searching for base64 encoded content
+2025-11-25 14:43:49,793 - DEBUG - [extract_file_metadata:290] - [EXTRACT] Extracting file metadata
+2025-11-25 14:43:49,794 - DEBUG - [extract_data:384] - [EXTRACT] Found 0 files
+2025-11-25 14:43:49,794 - DEBUG - [extract_base64_content:275] - [EXTRACT] Searching for base64 encoded content
+2025-11-25 14:43:49,794 - INFO - [parse_all_urls:641] - [PARSE_URLS] ✓ Parsed http://tds-llm-analysis.s-anand.net/submit: 28 chars
+2025-11-25 14:43:49,794 - INFO - [parse_all_urls:647] - [PARSE_URLS] ========== PARSED 1 URLs ==========
+2025-11-25 14:43:49,794 - INFO - [process_quiz:1147] - [QUIZ] Successfully parsed 1 URLs
+2025-11-25 14:43:49,794 - INFO - [process_quiz:1151] - [QUIZ] ========== STEP 5: LLM SOLVES WITH ALL CONTENT ==========
+2025-11-25 14:43:49,794 - INFO - [llm_solve_with_all_content:871] - [LLM_SOLVE] ========== SOLVING WITH ALL CONTENT ==========
+2025-11-25 14:43:49,794 - INFO - [llm_solve_with_all_content:936] - [LLM_SOLVE] Calling Gemini 2.5 Pro with all content...
+2025-11-25 14:43:49,794 - DEBUG - [call_llm_gemini:401] - [GEMINI] Calling API with max_tokens=4000
+2025-11-25 14:43:49,794 - DEBUG - [call_llm_gemini:427] - [GEMINI] Attempt 1/6
+2025-11-25 14:43:49,794 - INFO - [call_llm_gemini:428] - [GEMINI] ⏳ Sending request to Gemini 2.5 Pro...
+2025-11-25 14:43:49,794 - INFO - [call_llm_gemini:437] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-25 14:44:22,329 - INFO - [call_llm_gemini:440] - [GEMINI] ✓ Received response from Gemini
+2025-11-25 14:44:22,331 - DEBUG - [call_llm_gemini:453] - [GEMINI] Response content length: 2320 chars
+2025-11-25 14:44:22,331 - INFO - [call_llm_gemini:454] - [GEMINI] Response (first 300 chars): ```json
+{
+  "analysis": "The user wants me to solve a quiz by constructing a JSON object to be sent via a POST request. The initial page provides the structure of this JSON object and the submission URL.\n1.  **Identify the Submission URL:** The initial page states, 'POST this JSON to http://tds-llm
+2025-11-25 14:44:22,331 - DEBUG - [call_llm_gemini:459] - [GEMINI] Removed markdown code blocks
+2025-11-25 14:44:22,331 - DEBUG - [call_llm_gemini:465] - [GEMINI] Attempting to parse JSON response
+2025-11-25 14:44:22,331 - INFO - [call_llm_gemini:467] - [GEMINI] ✓ Successfully parsed JSON response
+2025-11-25 14:44:22,332 - DEBUG - [call_llm_gemini:468] - [GEMINI] Parsed keys: ['analysis', 'answer', 'confidence', 'reasoning', 'data_used']
+2025-11-25 14:44:22,332 - INFO - [llm_solve_with_all_content:960] - [LLM_SOLVE] ✓ Final answer: {'email': '23f2000524@ds.study.iitm.ac.in', 'secret': 'your secret', 'url': 'http://tds-llm-analysis.s-anand.net/demo', 'answer': 'solved'}
+2025-11-25 14:44:22,332 - INFO - [llm_solve_with_all_content:961] - [LLM_SOLVE] Confidence: 1.0
+2025-11-25 14:44:22,332 - INFO - [llm_solve_with_all_content:962] - [LLM_SOLVE] Data used: ["INITIAL PAGE CONTENT: visible_text containing the submission URL and JSON structure ('http://tds-llm-analysis.s-anand.net/submit', 'http://tds-llm-analysis.s-anand.net/demo', 'your secret').", "AVAILABLE CONTEXT VARIABLES: EMAIL ('23f2000524@ds.study.iitm.ac.in')."]
+2025-11-25 14:44:22,332 - INFO - [llm_solve_with_all_content:963] - [LLM_SOLVE] ========== SOLVING COMPLETE ==========
+2025-11-25 14:44:22,332 - INFO - [process_quiz:1163] - [QUIZ] ========== STEP 6: SUBMIT ANSWER ==========
+2025-11-25 14:44:22,332 - INFO - [submit_answer:1076] - [SUBMIT] Posting answer to https://tds-llm-analysis.s-anand.net/submit
+2025-11-25 14:44:22,415 - DEBUG - [atrace:87] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=443 local_address=None timeout=30.0 socket_options=None
+2025-11-25 14:44:22,434 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x10a40da90>
+2025-11-25 14:44:22,434 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x107942210> server_hostname='tds-llm-analysis.s-anand.net' timeout=30.0
+2025-11-25 14:44:22,453 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x10a222210>
+2025-11-25 14:44:22,454 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-25 14:44:22,454 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-25 14:44:22,454 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-25 14:44:22,454 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-25 14:44:22,454 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-25 14:44:22,474 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Date', b'Tue, 25 Nov 2025 09:14:22 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'98'), (b'Connection', b'keep-alive'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2B8glV6GjyuQcNAueYL8OzWqZdl0okKbM61sr7KE90iAc6xJ%2Bdp0aNNEi9Bf4jUVkbpOq6tPE0k1apajPvvh0Vnfvm1rhb2o9qnKXrS72NpH1wCglSmlkPXb1Bzo%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a400912694498f2-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-25 14:44:22,475 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-25 14:44:22,475 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-25 14:44:22,475 - DEBUG - [atrace:87] - response_closed.started
+2025-11-25 14:44:22,475 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-25 14:44:22,475 - DEBUG - [atrace:87] - close.started
+2025-11-25 14:44:22,476 - DEBUG - [atrace:87] - close.complete
+2025-11-25 14:44:22,476 - ERROR - [submit_answer:1108] - [SUBMIT] Error: Server error '500 Internal Server Error' for url 'https://tds-llm-analysis.s-anand.net/submit'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+2025-11-25 14:44:22,476 - ERROR - [process_request:1207] - [CHAIN] Quiz failed
+2025-11-25 14:44:22,476 - INFO - [process_request:1221] - 
+======================================================================
+2025-11-25 14:44:22,476 - INFO - [process_request:1222] - [CHAIN] Completed 0 quizzes in 61.2s
+2025-11-25 14:44:22,476 - INFO - [process_request:1223] - ======================================================================
+
+2025-11-25 14:44:35,062 - INFO - [shutdown:264] - Shutting down
+2025-11-25 14:44:35,164 - INFO - [shutdown:67] - Waiting for application shutdown.
+2025-11-25 14:44:35,165 - INFO - [shutdown:76] - Application shutdown complete.
+2025-11-25 14:44:35,166 - INFO - [_serve:94] - Finished server process [25452]

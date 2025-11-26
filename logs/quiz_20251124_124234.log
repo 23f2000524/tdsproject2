@@ -1,0 +1,223 @@
+2025-11-24 12:42:34,443 - INFO - [<module>:57] - [INIT] Gemini API configured successfully
+2025-11-24 12:42:34,461 - INFO - [<module>:971] - [START] Quiz Solver Service v6 - Gemini Edition
+2025-11-24 12:42:34,461 - INFO - [<module>:972] - [START] GEMINI_API_KEY configured: True
+2025-11-24 12:42:34,461 - INFO - [<module>:973] - [START] SECRET_KEY configured: True
+2025-11-24 12:42:34,461 - INFO - [<module>:974] - [START] LLM Provider: Google Gemini 1.5 Pro Latest
+2025-11-24 12:42:34,461 - INFO - [<module>:975] - [START] Rate Limits: 15 req/min, 1M tokens/min, 1500 req/day
+2025-11-24 12:42:34,462 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-24 12:42:34,471 - INFO - [_serve:84] - Started server process [656]
+2025-11-24 12:42:34,471 - INFO - [startup:48] - Waiting for application startup.
+2025-11-24 12:42:34,471 - INFO - [startup:62] - Application startup complete.
+2025-11-24 12:42:34,472 - INFO - [_log_started_message:216] - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-11-24 12:42:38,064 - INFO - [receive_request:923] - [API] POST /receive_request
+2025-11-24 12:42:38,064 - INFO - [receive_request:941] - [API] Valid request for 23f2000524@ds.study.iitm.ac.in
+2025-11-24 12:42:38,064 - INFO - [send:473] - 127.0.0.1:52794 - "POST /receive_request HTTP/1.1" 200
+2025-11-24 12:42:38,064 - INFO - [process_request:876] - 
+======================================================================
+2025-11-24 12:42:38,064 - INFO - [process_request:877] - [CHAIN] Starting for 23f2000524@ds.study.iitm.ac.in
+2025-11-24 12:42:38,064 - INFO - [process_request:878] - [CHAIN] Initial URL: http://tds-llm-analysis.s-anand.net/demo
+2025-11-24 12:42:38,064 - INFO - [process_request:879] - [CHAIN] Extended timeout: 300 seconds (5 minutes)
+2025-11-24 12:42:38,064 - INFO - [process_request:880] - [CHAIN] Using Gemini 1.5 Pro Latest
+2025-11-24 12:42:38,064 - INFO - [process_request:881] - ======================================================================
+
+2025-11-24 12:42:38,064 - INFO - [process_request:897] - [CHAIN] Quiz 1/10 | 0.0s elapsed | 300.0s remaining
+2025-11-24 12:42:38,064 - INFO - [process_quiz:812] - [QUIZ] Starting: http://tds-llm-analysis.s-anand.net/demo
+2025-11-24 12:42:38,064 - DEBUG - [extract_url_params:78] - [CONTEXT] Extracted variables: {'EMAIL': '23f2000524@ds.study.iitm.ac.in'}
+2025-11-24 12:42:38,065 - DEBUG - [process_quiz:817] - [QUIZ] Step 1: Fetch page
+2025-11-24 12:42:38,065 - INFO - [fetch_page:132] - [FETCH] Starting fetch: http://tds-llm-analysis.s-anand.net/demo
+2025-11-24 12:42:38,065 - DEBUG - [fetch_page:137] - [FETCH] Attempting static fetch
+2025-11-24 12:42:38,103 - DEBUG - [atrace:87] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=80 local_address=None timeout=30.0 socket_options=None
+2025-11-24 12:42:38,212 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x12421ae40>
+2025-11-24 12:42:38,213 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'GET']>
+2025-11-24 12:42:38,213 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-24 12:42:38,213 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'GET']>
+2025-11-24 12:42:38,213 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-24 12:42:38,213 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-24 12:42:38,240 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 24 Nov 2025 07:12:38 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=vERIeyiJGmfRy1VpK%2B5xK0i4DwSIIBZ71kNjSUSXjZ0jCIXeBVaxOJIVvq3Lo25mBe2lnLMzmY7QZ2F20X1RobiJ26KkVz9XZEhSXU02ZduXij1KZ5S2nW%2FMuOE%3D"}]}'), (b'ETag', b'W/"ce08b59240a57c2e963ec19952224928"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a37195f5bdf97f7-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-24 12:42:38,241 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'GET']>
+2025-11-24 12:42:38,241 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-24 12:42:38,242 - DEBUG - [atrace:87] - response_closed.started
+2025-11-24 12:42:38,242 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-24 12:42:38,242 - DEBUG - [atrace:87] - close.started
+2025-11-24 12:42:38,242 - DEBUG - [atrace:87] - close.complete
+2025-11-24 12:42:38,242 - DEBUG - [fetch_page:142] - [FETCH] Static fetch successful: 336 bytes
+2025-11-24 12:42:38,242 - DEBUG - [process_quiz:823] - [QUIZ] Step 2: Extract data
+2025-11-24 12:42:38,242 - INFO - [extract_data:226] - [EXTRACT] Parsing page data
+2025-11-24 12:42:38,243 - DEBUG - [extract_data:255] - [EXTRACT] Found 0 links
+2025-11-24 12:42:38,243 - DEBUG - [extract_data:269] - [EXTRACT] Found 0 tables
+2025-11-24 12:42:38,243 - DEBUG - [extract_data:289] - [EXTRACT] Found 0 forms
+2025-11-24 12:42:38,243 - DEBUG - [extract_base64_content:189] - [EXTRACT] Searching for base64 encoded content
+2025-11-24 12:42:38,244 - DEBUG - [extract_file_metadata:204] - [EXTRACT] Extracting file metadata
+2025-11-24 12:42:38,244 - DEBUG - [extract_data:298] - [EXTRACT] Found 0 files
+2025-11-24 12:42:38,244 - DEBUG - [process_quiz:826] - [QUIZ] Step 3: First LLM call - Understanding phase
+2025-11-24 12:42:38,244 - INFO - [llm_understand:446] - [LLM_UNDERSTAND] ========== PHASE 1: UNDERSTANDING QUIZ ==========
+2025-11-24 12:42:38,244 - INFO - [llm_understand:447] - [LLM_UNDERSTAND] Sending data to Gemini for analysis...
+2025-11-24 12:42:38,244 - INFO - [llm_understand:489] - [LLM_UNDERSTAND] Calling Gemini 1.5 Pro Latest with 4000 tokens...
+2025-11-24 12:42:38,244 - DEBUG - [call_llm_gemini:315] - [GEMINI] Calling API with max_tokens=4000
+2025-11-24 12:42:38,244 - DEBUG - [call_llm_gemini:341] - [GEMINI] Attempt 1/6
+2025-11-24 12:42:38,244 - INFO - [call_llm_gemini:342] - [GEMINI] ⏳ Sending request to Gemini 1.5 Pro Latest...
+2025-11-24 12:42:38,244 - INFO - [call_llm_gemini:351] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-24 12:42:38,440 - WARNING - [call_llm_gemini:437] - [GEMINI] Error: NotFound: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-24 12:42:38,440 - WARNING - [call_llm_gemini:438] - [GEMINI] Retry 1/5 after 2s
+2025-11-24 12:42:40,440 - DEBUG - [call_llm_gemini:341] - [GEMINI] Attempt 2/6
+2025-11-24 12:42:40,441 - INFO - [call_llm_gemini:342] - [GEMINI] ⏳ Sending request to Gemini 1.5 Pro Latest...
+2025-11-24 12:42:40,442 - INFO - [call_llm_gemini:351] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-24 12:42:40,579 - WARNING - [call_llm_gemini:437] - [GEMINI] Error: NotFound: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-24 12:42:40,579 - WARNING - [call_llm_gemini:438] - [GEMINI] Retry 2/5 after 4s
+2025-11-24 12:42:44,580 - DEBUG - [call_llm_gemini:341] - [GEMINI] Attempt 3/6
+2025-11-24 12:42:44,581 - INFO - [call_llm_gemini:342] - [GEMINI] ⏳ Sending request to Gemini 1.5 Pro Latest...
+2025-11-24 12:42:44,581 - INFO - [call_llm_gemini:351] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-24 12:42:44,713 - WARNING - [call_llm_gemini:437] - [GEMINI] Error: NotFound: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-11-24 12:42:44,713 - WARNING - [call_llm_gemini:438] - [GEMINI] Retry 3/5 after 8s
+2025-11-24 12:42:45,599 - INFO - [shutdown:264] - Shutting down
+2025-11-24 12:42:45,700 - INFO - [_wait_tasks_to_complete:306] - Waiting for background tasks to complete. (CTRL+C to force quit)
+2025-11-24 12:42:45,903 - INFO - [_serve:94] - Finished server process [656]
+2025-11-24 12:42:45,912 - ERROR - [send:134] - Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py", line 677, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py", line 2046, in _run_once
+    handle._run()
+    ~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/uvicorn/server.py", line 70, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 148, in __exit__
+    next(self.gen)
+    ~~~~^^^^^^^^^^
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/uvicorn/server.py", line 331, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 166, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/routing.py", line 701, in lifespan
+    await receive()
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-11-24 12:42:45,913 - ERROR - [run_asgi:408] - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/goldenmehmood/Documents/iitmwork/tds/tdsproj2gitted/tdsproject2/rec_req.py", line 352, in call_llm_gemini
+    response = await asyncio.to_thread(model.generate_content, prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/google/api_core/grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/fastapi/applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/fastapi/routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/fastapi/routing.py", line 112, in app
+    await response(scope, receive, send)
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/responses.py", line 167, in __call__
+    await self.background()
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/background.py", line 36, in __call__
+    await task()
+  File "/Users/goldenmehmood/.cache/uv/environments-v2/rec-req-52b8bfcfd2afe510/lib/python3.14/site-packages/starlette/background.py", line 21, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "/Users/goldenmehmood/Documents/iitmwork/tds/tdsproj2gitted/tdsproject2/rec_req.py", line 900, in process_request
+    success, next_url = await process_quiz(current_url, email, secret, BASE_URL)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/goldenmehmood/Documents/iitmwork/tds/tdsproj2gitted/tdsproject2/rec_req.py", line 827, in process_quiz
+    understanding = await llm_understand(data, context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/goldenmehmood/Documents/iitmwork/tds/tdsproj2gitted/tdsproject2/rec_req.py", line 490, in llm_understand
+    result = await call_llm_gemini(prompt, system_instruction, max_tokens=4000)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/goldenmehmood/Documents/iitmwork/tds/tdsproj2gitted/tdsproject2/rec_req.py", line 439, in call_llm_gemini
+    await asyncio.sleep(wait_time)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/tasks.py", line 702, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError

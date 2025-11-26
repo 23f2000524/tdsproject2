@@ -1,0 +1,226 @@
+2025-11-23 17:48:10,096 - INFO - [<module>:717] - [START] Quiz Solver Service v4
+2025-11-23 17:48:10,097 - INFO - [<module>:718] - [START] AIPIPE configured: True
+2025-11-23 17:48:10,097 - INFO - [<module>:719] - [START] SECRET configured: True
+2025-11-23 17:48:10,097 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-23 17:48:10,106 - INFO - [_serve:84] - Started server process [81998]
+2025-11-23 17:48:10,107 - INFO - [startup:48] - Waiting for application startup.
+2025-11-23 17:48:10,107 - INFO - [startup:62] - Application startup complete.
+2025-11-23 17:48:10,107 - INFO - [_log_started_message:216] - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-11-23 17:48:14,553 - INFO - [receive_request:683] - [API] POST /receive_request
+2025-11-23 17:48:14,553 - INFO - [receive_request:701] - [API] Valid request for 23f2000524@ds.study.iitm.ac.in
+2025-11-23 17:48:14,553 - INFO - [send:473] - 127.0.0.1:50979 - "POST /receive_request HTTP/1.1" 200
+2025-11-23 17:48:14,553 - INFO - [process_request:639] - 
+======================================================================
+2025-11-23 17:48:14,553 - INFO - [process_request:640] - [CHAIN] Starting for 23f2000524@ds.study.iitm.ac.in
+2025-11-23 17:48:14,553 - INFO - [process_request:641] - [CHAIN] Initial URL: http://tds-llm-analysis.s-anand.net/demo
+2025-11-23 17:48:14,553 - INFO - [process_request:642] - ======================================================================
+
+2025-11-23 17:48:14,553 - INFO - [process_request:657] - [CHAIN] Quiz 1/10 | 0.0s elapsed
+2025-11-23 17:48:14,554 - INFO - [process_quiz:585] - [QUIZ] Starting: http://tds-llm-analysis.s-anand.net/demo
+2025-11-23 17:48:14,554 - DEBUG - [process_quiz:588] - [QUIZ] Step 1: Fetch page
+2025-11-23 17:48:14,554 - INFO - [fetch_page:94] - [FETCH] Starting fetch: http://tds-llm-analysis.s-anand.net/demo
+2025-11-23 17:48:14,554 - DEBUG - [fetch_page:99] - [FETCH] Attempting static fetch
+2025-11-23 17:48:14,577 - DEBUG - [trace:47] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=80 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:14,609 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070ec6e0>
+2025-11-23 17:48:14,609 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'GET']>
+2025-11-23 17:48:14,610 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:14,610 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'GET']>
+2025-11-23 17:48:14,610 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:14,610 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-23 17:48:14,652 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:14 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=nOVDMGkyvOz1EsG3YMAMHRXoUQNiMVYVqpwU5X7XGCkuzKDtnenNxiRuf43ENrGdhrdSFQZPQsm68gwK09NQj1j3IfkcMN%2F4d9sIbKE5SUzaCni0Y3aP79APSCw%3D"}]}'), (b'ETag', b'W/"ce08b59240a57c2e963ec19952224928"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a309ba9d935d7e5-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:14,652 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'GET']>
+2025-11-23 17:48:14,652 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:14,652 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:14,652 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:14,652 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:14,653 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:14,653 - DEBUG - [fetch_page:103] - [FETCH] Static fetch successful: 336 bytes
+2025-11-23 17:48:14,653 - DEBUG - [process_quiz:594] - [QUIZ] Step 2: Extract data
+2025-11-23 17:48:14,653 - INFO - [extract_data:187] - [EXTRACT] Parsing page data
+2025-11-23 17:48:14,653 - DEBUG - [extract_data:216] - [EXTRACT] Found 0 links
+2025-11-23 17:48:14,653 - DEBUG - [extract_data:230] - [EXTRACT] Found 0 tables
+2025-11-23 17:48:14,653 - DEBUG - [extract_data:250] - [EXTRACT] Found 0 forms
+2025-11-23 17:48:14,653 - DEBUG - [extract_base64_content:150] - [EXTRACT] Searching for base64 encoded content
+2025-11-23 17:48:14,654 - DEBUG - [extract_file_metadata:165] - [EXTRACT] Extracting file metadata
+2025-11-23 17:48:14,654 - DEBUG - [extract_data:259] - [EXTRACT] Found 0 files
+2025-11-23 17:48:14,654 - DEBUG - [process_quiz:597] - [QUIZ] Step 3: First LLM call - Understanding phase
+2025-11-23 17:48:14,654 - INFO - [llm_understand:316] - [LLM_UNDERSTAND] Phase 1: Interpreting quiz page
+2025-11-23 17:48:14,654 - DEBUG - [call_llm:276] - [LLM] Calling API
+2025-11-23 17:48:14,661 - DEBUG - [trace:47] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:14,975 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x107105a90>
+2025-11-23 17:48:14,976 - DEBUG - [trace:47] - start_tls.started ssl_context=<ssl.SSLContext object at 0x106ef6410> server_hostname='aipipe.org' timeout=5.0
+2025-11-23 17:48:14,995 - DEBUG - [trace:47] - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x107105bd0>
+2025-11-23 17:48:14,995 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:14,995 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:14,995 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 17:48:14,995 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:14,996 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:18,959 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:18 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9a309bac39eeb7d1-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'Server', b'cloudflare'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'permissions-policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'referrer-policy', b'no-referrer, strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3qpgBHgbND9%2Fi74nt4z1kKp2ySwqUEDCf7sYVm%2FXOj3vZQR7AFpjD6KVPVTydX7%2BsHtTL5xru19gE4NR0nzkUWTi7kKf%2B%2B29%2F68%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:18,960 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 17:48:18,961 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:18,961 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:18,962 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:18,962 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:18,962 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:18,963 - DEBUG - [call_llm:300] - [LLM] Response received, 363 chars
+2025-11-23 17:48:18,963 - INFO - [call_llm:304] - [LLM] Successfully parsed JSON response
+2025-11-23 17:48:18,963 - INFO - [llm_understand:355] - [LLM_UNDERSTAND] Understanding complete: The quiz requires the participant to submit a JSON payload to a specified endpoint '/submit'. The pa
+2025-11-23 17:48:18,963 - DEBUG - [process_quiz:603] - [QUIZ] Step 4: Perform steps if needed
+2025-11-23 17:48:18,963 - DEBUG - [process_quiz:611] - [QUIZ] Step 5: Second LLM call - Solving phase
+2025-11-23 17:48:18,963 - INFO - [llm_solve:504] - [LLM_SOLVE] Phase 2: Solving quiz
+2025-11-23 17:48:18,963 - DEBUG - [call_llm:276] - [LLM] Calling API
+2025-11-23 17:48:18,983 - DEBUG - [trace:47] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:18,990 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070cde00>
+2025-11-23 17:48:18,991 - DEBUG - [trace:47] - start_tls.started ssl_context=<ssl.SSLContext object at 0x106ef65b0> server_hostname='aipipe.org' timeout=5.0
+2025-11-23 17:48:19,002 - DEBUG - [trace:47] - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070cdf30>
+2025-11-23 17:48:19,002 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:19,002 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:19,002 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 17:48:19,002 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:19,002 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:21,519 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:21 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9a309bc54c8c1e0a-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'Server', b'cloudflare'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'permissions-policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'referrer-policy', b'no-referrer, strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=iJp9HLQdHKj5LMus3QOEzSxZ%2BG%2Bo8OBwzEeIQOvT7aM91LL07xCUljFdUIUOZ68e%2BekefKhZi9lPnjJRaaJpTB7MVtdPotCb2Js%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:21,521 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 17:48:21,521 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:21,522 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:21,522 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:21,522 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:21,522 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:21,523 - DEBUG - [call_llm:300] - [LLM] Response received, 234 chars
+2025-11-23 17:48:21,523 - INFO - [call_llm:304] - [LLM] Successfully parsed JSON response
+2025-11-23 17:48:21,523 - INFO - [llm_solve:545] - [LLM_SOLVE] Answer: anything you want (confidence: 1.0)
+2025-11-23 17:48:21,523 - DEBUG - [process_quiz:622] - [QUIZ] Step 6: Submit answer
+2025-11-23 17:48:21,523 - INFO - [submit_answer:550] - [SUBMIT] Posting answer to https://tds-llm-analysis.s-anand.net/submit
+2025-11-23 17:48:21,542 - DEBUG - [trace:47] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:21,550 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x107092c30>
+2025-11-23 17:48:21,550 - DEBUG - [trace:47] - start_tls.started ssl_context=<ssl.SSLContext object at 0x104319ae0> server_hostname='tds-llm-analysis.s-anand.net' timeout=5.0
+2025-11-23 17:48:21,561 - DEBUG - [trace:47] - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070a68b0>
+2025-11-23 17:48:21,561 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:21,562 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:21,562 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 17:48:21,562 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:21,562 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:24,693 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Nf%2FRSKKQAE5z2gHkWX2pIR17noLn9M0fWaw3oh6JLkam92Yez1Psb4G1Yn6ehenvrd0zzZLgg3nikgy0X33r4ocCAeg6mcnk4qwJAIhS3htptwiVBx4urAIoCN0%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a309bd54c59de29-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:24,694 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 17:48:24,695 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:24,695 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:24,696 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:24,696 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:24,697 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:24,697 - INFO - [submit_answer:574] - [SUBMIT] ✓ CORRECT
+2025-11-23 17:48:24,697 - INFO - [process_request:657] - [CHAIN] Quiz 2/10 | 10.1s elapsed
+2025-11-23 17:48:24,697 - INFO - [process_quiz:585] - [QUIZ] Starting: https://tds-llm-analysis.s-anand.net/demo-scrape?email=23f2000524%40ds.study.iitm.ac.in&id=6942
+2025-11-23 17:48:24,697 - DEBUG - [process_quiz:588] - [QUIZ] Step 1: Fetch page
+2025-11-23 17:48:24,697 - INFO - [fetch_page:94] - [FETCH] Starting fetch: https://tds-llm-analysis.s-anand.net/demo-scrape?email=23f2000524%40ds.study.iitm.ac.in&id=6942
+2025-11-23 17:48:24,697 - DEBUG - [fetch_page:99] - [FETCH] Attempting static fetch
+2025-11-23 17:48:24,716 - DEBUG - [trace:47] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:24,723 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070a6cf0>
+2025-11-23 17:48:24,723 - DEBUG - [trace:47] - start_tls.started ssl_context=<ssl.SSLContext object at 0x107082a80> server_hostname='tds-llm-analysis.s-anand.net' timeout=5.0
+2025-11-23 17:48:24,737 - DEBUG - [trace:47] - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070fc550>
+2025-11-23 17:48:24,738 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'GET']>
+2025-11-23 17:48:24,738 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:24,738 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'GET']>
+2025-11-23 17:48:24,738 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:24,738 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-23 17:48:24,762 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:24 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9tFdG4CqvJ1r7hr18T5qWeW8zeSFBgT8LlwG%2F%2BS7MfGcKlKi%2BQus3hEDIytdXIm7DqQJ0tfDVfyUVvtnbhHSaDTqGDmJMX3x3fQrNYh%2B4SlaDn9amofiMkIZjZ4%3D"}]}'), (b'ETag', b'W/"504379483bd9ab9550da5301a3521113"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a309be92c7d45ec-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:24,762 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'GET']>
+2025-11-23 17:48:24,763 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:24,763 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:24,763 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:24,763 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:24,763 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:24,764 - DEBUG - [fetch_page:103] - [FETCH] Static fetch successful: 779 bytes
+2025-11-23 17:48:24,764 - DEBUG - [process_quiz:594] - [QUIZ] Step 2: Extract data
+2025-11-23 17:48:24,764 - INFO - [extract_data:187] - [EXTRACT] Parsing page data
+2025-11-23 17:48:24,764 - DEBUG - [extract_data:216] - [EXTRACT] Found 0 links
+2025-11-23 17:48:24,764 - DEBUG - [extract_data:230] - [EXTRACT] Found 0 tables
+2025-11-23 17:48:24,764 - DEBUG - [extract_data:250] - [EXTRACT] Found 0 forms
+2025-11-23 17:48:24,764 - DEBUG - [extract_base64_content:150] - [EXTRACT] Searching for base64 encoded content
+2025-11-23 17:48:24,764 - DEBUG - [extract_base64_content:157] - [EXTRACT] Decoded: Scrape <a href="/demo-scrape-data?email=$EMAIL">/demo-scrape-data?email=$EMAIL</a> (relative to this
+2025-11-23 17:48:24,764 - INFO - [extract_data:256] - [EXTRACT] Decoded content length: 338
+2025-11-23 17:48:24,764 - DEBUG - [extract_file_metadata:165] - [EXTRACT] Extracting file metadata
+2025-11-23 17:48:24,765 - DEBUG - [extract_data:259] - [EXTRACT] Found 0 files
+2025-11-23 17:48:24,765 - DEBUG - [process_quiz:597] - [QUIZ] Step 3: First LLM call - Understanding phase
+2025-11-23 17:48:24,765 - INFO - [llm_understand:316] - [LLM_UNDERSTAND] Phase 1: Interpreting quiz page
+2025-11-23 17:48:24,765 - DEBUG - [call_llm:276] - [LLM] Calling API
+2025-11-23 17:48:24,777 - DEBUG - [trace:47] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:24,785 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070fc950>
+2025-11-23 17:48:24,785 - DEBUG - [trace:47] - start_tls.started ssl_context=<ssl.SSLContext object at 0x106f0b7d0> server_hostname='aipipe.org' timeout=5.0
+2025-11-23 17:48:24,798 - DEBUG - [trace:47] - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070ca300>
+2025-11-23 17:48:24,798 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:24,798 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:24,798 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 17:48:24,798 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:24,798 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:27,561 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:27 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9a309be98cd5d8a9-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'Server', b'cloudflare'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'permissions-policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'referrer-policy', b'no-referrer, strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=UOKt6E6nHAMUZhE%2Fq3rcw0Tr6TgZLZ1stPNC8kVQpgCs2xiRrsG29Uck0v47XdJmS0UG4XD9hp%2FoDuJWnRJnXOBlbjsQ1%2F54Os8%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:27,563 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 17:48:27,564 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:27,564 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:27,564 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:27,564 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:27,565 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:27,565 - DEBUG - [call_llm:300] - [LLM] Response received, 295 chars
+2025-11-23 17:48:27,565 - INFO - [call_llm:304] - [LLM] Successfully parsed JSON response
+2025-11-23 17:48:27,565 - INFO - [llm_understand:355] - [LLM_UNDERSTAND] Understanding complete: The quiz requires scraping a specific page to retrieve a secret code, then posting this code along w
+2025-11-23 17:48:27,566 - DEBUG - [process_quiz:603] - [QUIZ] Step 4: Perform steps if needed
+2025-11-23 17:48:27,566 - INFO - [perform_step:456] - [PERFORM] Executing: scrape_url -> /demo-scrape-data?email=$EMAIL
+2025-11-23 17:48:27,566 - INFO - [perform_step:464] - [PERFORM] Scraping: https://tds-llm-analysis.s-anand.net/demo-scrape-data?email=$EMAIL
+2025-11-23 17:48:27,566 - INFO - [fetch_page:94] - [FETCH] Starting fetch: https://tds-llm-analysis.s-anand.net/demo-scrape-data?email=$EMAIL
+2025-11-23 17:48:27,566 - DEBUG - [fetch_page:99] - [FETCH] Attempting static fetch
+2025-11-23 17:48:27,584 - DEBUG - [trace:47] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:27,592 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070ca6c0>
+2025-11-23 17:48:27,592 - DEBUG - [trace:47] - start_tls.started ssl_context=<ssl.SSLContext object at 0x106ee7e20> server_hostname='tds-llm-analysis.s-anand.net' timeout=5.0
+2025-11-23 17:48:27,605 - DEBUG - [trace:47] - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070a2eb0>
+2025-11-23 17:48:27,606 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'GET']>
+2025-11-23 17:48:27,606 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:27,606 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'GET']>
+2025-11-23 17:48:27,606 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:27,606 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-23 17:48:27,626 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:27 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=xs2Rc37LRU5MUkUeBrbnJ8cLGavHyMfaixwt031Mo3voHRj3fjw5Gaxkp5oAsDffQ8x5YyAPh4nsIp5a%2FWWYR1OwrC6QNEYQcwxNrhMpu%2FVuxXYuiiQ7CINWkRk%3D"}]}'), (b'ETag', b'W/"323597bff13f3f1f00960d8a6047231c"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a309bfb1b17f556-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:27,626 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'GET']>
+2025-11-23 17:48:27,627 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:27,627 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:27,627 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:27,627 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:27,627 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:27,627 - DEBUG - [fetch_page:103] - [FETCH] Static fetch successful: 79 bytes
+2025-11-23 17:48:27,628 - INFO - [extract_data:187] - [EXTRACT] Parsing page data
+2025-11-23 17:48:27,628 - DEBUG - [extract_data:216] - [EXTRACT] Found 0 links
+2025-11-23 17:48:27,628 - DEBUG - [extract_data:230] - [EXTRACT] Found 0 tables
+2025-11-23 17:48:27,628 - DEBUG - [extract_data:250] - [EXTRACT] Found 0 forms
+2025-11-23 17:48:27,628 - DEBUG - [extract_base64_content:150] - [EXTRACT] Searching for base64 encoded content
+2025-11-23 17:48:27,628 - DEBUG - [extract_file_metadata:165] - [EXTRACT] Extracting file metadata
+2025-11-23 17:48:27,629 - DEBUG - [extract_data:259] - [EXTRACT] Found 0 files
+2025-11-23 17:48:27,629 - INFO - [perform_step:469] - [PERFORM] Scrape complete
+2025-11-23 17:48:27,629 - DEBUG - [process_quiz:611] - [QUIZ] Step 5: Second LLM call - Solving phase
+2025-11-23 17:48:27,629 - INFO - [llm_solve:504] - [LLM_SOLVE] Phase 2: Solving quiz
+2025-11-23 17:48:27,629 - DEBUG - [call_llm:276] - [LLM] Calling API
+2025-11-23 17:48:27,643 - DEBUG - [trace:47] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-11-23 17:48:27,651 - DEBUG - [trace:47] - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x1070a3bd0>
+2025-11-23 17:48:27,651 - DEBUG - [trace:47] - start_tls.started ssl_context=<ssl.SSLContext object at 0x107124050> server_hostname='aipipe.org' timeout=5.0
+2025-11-23 17:48:27,663 - DEBUG - [trace:47] - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x10707ec30>
+2025-11-23 17:48:27,663 - DEBUG - [trace:47] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:27,664 - DEBUG - [trace:47] - send_request_headers.complete
+2025-11-23 17:48:27,664 - DEBUG - [trace:47] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 17:48:27,664 - DEBUG - [trace:47] - send_request_body.complete
+2025-11-23 17:48:27,664 - DEBUG - [trace:47] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 17:48:30,120 - DEBUG - [trace:47] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 12:18:30 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9a309bfb68f54e88-DEL'), (b'Access-Control-Allow-Origin', b'*'), (b'Server', b'cloudflare'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'permissions-policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'referrer-policy', b'no-referrer, strict-origin-when-cross-origin'), (b'x-content-type-options', b'nosniff'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=8Xc9TTccowQLS77qicZrgEE%2BGZJZgTehARqR2EJX3%2F6auo%2FGZ0hOcXUvD4OBIB9C0hhLHfu8V%2FAXFuonwuU0GfdsB8uShrQd%2Fxs%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 17:48:30,122 - DEBUG - [trace:47] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 17:48:30,123 - DEBUG - [trace:47] - receive_response_body.complete
+2025-11-23 17:48:30,123 - DEBUG - [trace:47] - response_closed.started
+2025-11-23 17:48:30,123 - DEBUG - [trace:47] - response_closed.complete
+2025-11-23 17:48:30,124 - DEBUG - [trace:47] - close.started
+2025-11-23 17:48:30,124 - DEBUG - [trace:47] - close.complete
+2025-11-23 17:48:30,124 - DEBUG - [call_llm:300] - [LLM] Response received, 226 chars
+2025-11-23 17:48:30,124 - INFO - [call_llm:304] - [LLM] Successfully parsed JSON response
+2025-11-23 17:48:30,125 - INFO - [llm_solve:545] - [LLM_SOLVE] Answer: None (confidence: 0.0)
+2025-11-23 17:48:30,125 - ERROR - [process_quiz:619] - [QUIZ] No answer generated
+2025-11-23 17:48:30,125 - ERROR - [process_request:663] - [CHAIN] Quiz failed
+2025-11-23 17:48:30,125 - INFO - [process_request:677] - 
+======================================================================
+2025-11-23 17:48:30,125 - INFO - [process_request:678] - [CHAIN] Completed 1 quizzes in 15.6s
+2025-11-23 17:48:30,125 - INFO - [process_request:679] - ======================================================================
+
+2025-11-23 17:55:56,394 - INFO - [shutdown:264] - Shutting down
+2025-11-23 17:55:56,502 - INFO - [shutdown:67] - Waiting for application shutdown.
+2025-11-23 17:55:56,504 - INFO - [shutdown:76] - Application shutdown complete.
+2025-11-23 17:55:56,504 - INFO - [_serve:94] - Finished server process [81998]

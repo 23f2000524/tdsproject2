@@ -1,0 +1,199 @@
+2025-11-23 22:53:34,614 - INFO - [<module>:956] - [START] Quiz Solver Service v5
+2025-11-23 22:53:34,614 - INFO - [<module>:957] - [START] AIPIPE configured: True
+2025-11-23 22:53:34,614 - INFO - [<module>:958] - [START] SECRET configured: True
+2025-11-23 22:53:34,615 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-23 22:53:34,624 - INFO - [_serve:84] - Started server process [89817]
+2025-11-23 22:53:34,624 - INFO - [startup:48] - Waiting for application startup.
+2025-11-23 22:53:34,624 - INFO - [startup:62] - Application startup complete.
+2025-11-23 22:53:34,624 - INFO - [_log_started_message:216] - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-11-23 22:53:37,609 - INFO - [receive_request:922] - [API] POST /receive_request
+2025-11-23 22:53:37,609 - INFO - [receive_request:940] - [API] Valid request for 23f2000524@ds.study.iitm.ac.in
+2025-11-23 22:53:37,609 - INFO - [send:473] - 127.0.0.1:51723 - "POST /receive_request HTTP/1.1" 200
+2025-11-23 22:53:37,609 - INFO - [process_request:876] - 
+======================================================================
+2025-11-23 22:53:37,610 - INFO - [process_request:877] - [CHAIN] Starting for 23f2000524@ds.study.iitm.ac.in
+2025-11-23 22:53:37,610 - INFO - [process_request:878] - [CHAIN] Initial URL: http://tds-llm-analysis.s-anand.net/demo
+2025-11-23 22:53:37,610 - INFO - [process_request:879] - [CHAIN] Extended timeout: 300 seconds (5 minutes)
+2025-11-23 22:53:37,610 - INFO - [process_request:880] - ======================================================================
+
+2025-11-23 22:53:37,610 - INFO - [process_request:896] - [CHAIN] Quiz 1/10 | 0.0s elapsed | 300.0s remaining
+2025-11-23 22:53:37,610 - INFO - [process_quiz:812] - [QUIZ] Starting: http://tds-llm-analysis.s-anand.net/demo
+2025-11-23 22:53:37,610 - DEBUG - [extract_url_params:71] - [CONTEXT] Extracted variables: {'EMAIL': '23f2000524@ds.study.iitm.ac.in'}
+2025-11-23 22:53:37,610 - DEBUG - [process_quiz:817] - [QUIZ] Step 1: Fetch page
+2025-11-23 22:53:37,610 - INFO - [fetch_page:125] - [FETCH] Starting fetch: http://tds-llm-analysis.s-anand.net/demo
+2025-11-23 22:53:37,610 - DEBUG - [fetch_page:130] - [FETCH] Attempting static fetch
+2025-11-23 22:53:37,636 - DEBUG - [atrace:87] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=80 local_address=None timeout=30.0 socket_options=None
+2025-11-23 22:53:37,662 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c223c0>
+2025-11-23 22:53:37,662 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'GET']>
+2025-11-23 22:53:37,662 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-23 22:53:37,662 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'GET']>
+2025-11-23 22:53:37,662 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-23 22:53:37,662 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-23 22:53:37,688 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 23 Nov 2025 17:23:37 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=EDFrNTP02s6RWjkct8P%2BNMw71iabznvku1ywQ3ru4qB7RoV%2B2fhKa10gkBMIc99%2FXpaIZkS%2FXKZ%2FX%2BbwM%2BbdDxkugk%2FKVtY7tfTdQKWCt8zk35DwWxwfrWsPym8%3D"}]}'), (b'ETag', b'W/"ce08b59240a57c2e963ec19952224928"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a325b00ba2a25a4-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 22:53:37,689 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'GET']>
+2025-11-23 22:53:37,689 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-23 22:53:37,689 - DEBUG - [atrace:87] - response_closed.started
+2025-11-23 22:53:37,689 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-23 22:53:37,690 - DEBUG - [atrace:87] - close.started
+2025-11-23 22:53:37,690 - DEBUG - [atrace:87] - close.complete
+2025-11-23 22:53:37,690 - DEBUG - [fetch_page:135] - [FETCH] Static fetch successful: 336 bytes
+2025-11-23 22:53:37,690 - DEBUG - [process_quiz:823] - [QUIZ] Step 2: Extract data
+2025-11-23 22:53:37,690 - INFO - [extract_data:219] - [EXTRACT] Parsing page data
+2025-11-23 22:53:37,690 - DEBUG - [extract_data:248] - [EXTRACT] Found 0 links
+2025-11-23 22:53:37,690 - DEBUG - [extract_data:262] - [EXTRACT] Found 0 tables
+2025-11-23 22:53:37,690 - DEBUG - [extract_data:282] - [EXTRACT] Found 0 forms
+2025-11-23 22:53:37,690 - DEBUG - [extract_base64_content:182] - [EXTRACT] Searching for base64 encoded content
+2025-11-23 22:53:37,690 - DEBUG - [extract_file_metadata:197] - [EXTRACT] Extracting file metadata
+2025-11-23 22:53:37,691 - DEBUG - [extract_data:291] - [EXTRACT] Found 0 files
+2025-11-23 22:53:37,691 - DEBUG - [process_quiz:826] - [QUIZ] Step 3: First LLM call - Understanding phase
+2025-11-23 22:53:37,691 - INFO - [llm_understand:434] - [LLM_UNDERSTAND] Phase 1: Interpreting quiz page
+2025-11-23 22:53:37,691 - DEBUG - [call_llm:308] - [LLM] Calling API with max_tokens=4000, timeout=120s
+2025-11-23 22:53:37,691 - DEBUG - [call_llm:320] - [LLM] Attempt 1/6
+2025-11-23 22:53:37,691 - DEBUG - [call_llm:322] - [LLM] Creating async client with 120s timeout
+2025-11-23 22:53:37,698 - DEBUG - [call_llm:324] - [LLM] Sending request to https://aipipe.org/openrouter/v1/chat/completions
+2025-11-23 22:53:37,698 - INFO - [call_llm:325] - [LLM] Waiting for LLM response (this may take several seconds)...
+2025-11-23 22:53:37,698 - DEBUG - [atrace:87] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=120.0 socket_options=None
+2025-11-23 22:53:37,716 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c6ac10>
+2025-11-23 22:53:37,717 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x103a2f5f0> server_hostname='aipipe.org' timeout=120.0
+2025-11-23 22:53:37,732 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c6ad50>
+2025-11-23 22:53:37,732 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:37,732 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-23 22:53:37,732 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 22:53:37,732 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-23 22:53:37,732 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:38,402 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sun, 23 Nov 2025 17:23:38 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'59'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=K4VOZQr0EPrCQw3piAfwJfQNkCX7OEQJtoSGzP%2FNbkIj28JfUWJ6FXxkxhS0OV08alh4xtXBXyrpmLKvaBBMX43Qu3Gv%2BlX0exo%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a325b012c843e74-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 22:53:38,403 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 22:53:38,403 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-23 22:53:38,403 - DEBUG - [atrace:87] - response_closed.started
+2025-11-23 22:53:38,403 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-23 22:53:38,403 - INFO - [call_llm:342] - [LLM] Received response with status 429
+2025-11-23 22:53:38,403 - DEBUG - [atrace:87] - close.started
+2025-11-23 22:53:38,404 - DEBUG - [atrace:87] - close.complete
+2025-11-23 22:53:38,404 - WARNING - [call_llm:351] - [LLM] Rate limited (429). Retry 1/5 after 2s backoff
+2025-11-23 22:53:38,404 - INFO - [call_llm:352] - [LLM] Sleeping for 2 seconds before retry...
+2025-11-23 22:53:40,405 - INFO - [call_llm:354] - [LLM] Retry 1 starting now...
+2025-11-23 22:53:40,406 - DEBUG - [call_llm:320] - [LLM] Attempt 2/6
+2025-11-23 22:53:40,406 - DEBUG - [call_llm:322] - [LLM] Creating async client with 120s timeout
+2025-11-23 22:53:40,427 - DEBUG - [call_llm:324] - [LLM] Sending request to https://aipipe.org/openrouter/v1/chat/completions
+2025-11-23 22:53:40,427 - INFO - [call_llm:325] - [LLM] Waiting for LLM response (this may take several seconds)...
+2025-11-23 22:53:40,427 - DEBUG - [atrace:87] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=120.0 socket_options=None
+2025-11-23 22:53:40,448 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c02fd0>
+2025-11-23 22:53:40,448 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x103a2f930> server_hostname='aipipe.org' timeout=120.0
+2025-11-23 22:53:40,462 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c03100>
+2025-11-23 22:53:40,462 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:40,462 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-23 22:53:40,463 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 22:53:40,463 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-23 22:53:40,463 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:40,636 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sun, 23 Nov 2025 17:23:40 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'59'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=zAF3SVrAMbTUuK09QjDae5IJBOBSu4k1Jvm25QTG4kvbiD3NSw7pqebiIA9OwMI4rovkpQDqpW8kCVo1wueGyMVvAxik%2FdM%2FGww%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a325b123af3c51e-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 22:53:40,637 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 22:53:40,638 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-23 22:53:40,638 - DEBUG - [atrace:87] - response_closed.started
+2025-11-23 22:53:40,638 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-23 22:53:40,638 - INFO - [call_llm:342] - [LLM] Received response with status 429
+2025-11-23 22:53:40,639 - DEBUG - [atrace:87] - close.started
+2025-11-23 22:53:40,639 - DEBUG - [atrace:87] - close.complete
+2025-11-23 22:53:40,639 - WARNING - [call_llm:351] - [LLM] Rate limited (429). Retry 2/5 after 4s backoff
+2025-11-23 22:53:40,639 - INFO - [call_llm:352] - [LLM] Sleeping for 4 seconds before retry...
+2025-11-23 22:53:44,639 - INFO - [call_llm:354] - [LLM] Retry 2 starting now...
+2025-11-23 22:53:44,640 - DEBUG - [call_llm:320] - [LLM] Attempt 3/6
+2025-11-23 22:53:44,640 - DEBUG - [call_llm:322] - [LLM] Creating async client with 120s timeout
+2025-11-23 22:53:44,661 - DEBUG - [call_llm:324] - [LLM] Sending request to https://aipipe.org/openrouter/v1/chat/completions
+2025-11-23 22:53:44,662 - INFO - [call_llm:325] - [LLM] Waiting for LLM response (this may take several seconds)...
+2025-11-23 22:53:44,662 - DEBUG - [atrace:87] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=120.0 socket_options=None
+2025-11-23 22:53:44,683 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c70ef0>
+2025-11-23 22:53:44,683 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x100e59ae0> server_hostname='aipipe.org' timeout=120.0
+2025-11-23 22:53:44,695 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c6c9e0>
+2025-11-23 22:53:44,695 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:44,695 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-23 22:53:44,695 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 22:53:44,696 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-23 22:53:44,696 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:44,875 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sun, 23 Nov 2025 17:23:44 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'59'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rYf8hKI%2Fftkbre8RkCIbKU%2FTgMcGN3pJv3PQEReBazw1NA1p3FtXFxDig5klkeSi00hxVZg%2FsfX0SDqK%2BxFVxRsTnUvCEPb1%2F70%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a325b2caf2f3029-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 22:53:44,876 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 22:53:44,876 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-23 22:53:44,876 - DEBUG - [atrace:87] - response_closed.started
+2025-11-23 22:53:44,876 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-23 22:53:44,877 - INFO - [call_llm:342] - [LLM] Received response with status 429
+2025-11-23 22:53:44,877 - DEBUG - [atrace:87] - close.started
+2025-11-23 22:53:44,877 - DEBUG - [atrace:87] - close.complete
+2025-11-23 22:53:44,878 - WARNING - [call_llm:351] - [LLM] Rate limited (429). Retry 3/5 after 9s backoff
+2025-11-23 22:53:44,878 - INFO - [call_llm:352] - [LLM] Sleeping for 9 seconds before retry...
+2025-11-23 22:53:53,879 - INFO - [call_llm:354] - [LLM] Retry 3 starting now...
+2025-11-23 22:53:53,879 - DEBUG - [call_llm:320] - [LLM] Attempt 4/6
+2025-11-23 22:53:53,879 - DEBUG - [call_llm:322] - [LLM] Creating async client with 120s timeout
+2025-11-23 22:53:53,899 - DEBUG - [call_llm:324] - [LLM] Sending request to https://aipipe.org/openrouter/v1/chat/completions
+2025-11-23 22:53:53,899 - INFO - [call_llm:325] - [LLM] Waiting for LLM response (this may take several seconds)...
+2025-11-23 22:53:53,900 - DEBUG - [atrace:87] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=120.0 socket_options=None
+2025-11-23 22:53:53,921 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c6ce20>
+2025-11-23 22:53:53,921 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x103c897c0> server_hostname='aipipe.org' timeout=120.0
+2025-11-23 22:53:53,931 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c78650>
+2025-11-23 22:53:53,931 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:53,932 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-23 22:53:53,932 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 22:53:53,932 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-23 22:53:53,932 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 22:53:54,097 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sun, 23 Nov 2025 17:23:54 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'59'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=wGB9D22lvLPlLppnFN9NuwBkLkHMSOOMb%2BNRlamqvsmuOcRYVkiu6lZKrZYF%2FXvokMOj0dSzOGh051YRpkOkJY78Z7elJKCOmKc%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a325b666d9e3e74-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 22:53:54,099 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 22:53:54,099 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-23 22:53:54,099 - DEBUG - [atrace:87] - response_closed.started
+2025-11-23 22:53:54,100 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-23 22:53:54,100 - INFO - [call_llm:342] - [LLM] Received response with status 429
+2025-11-23 22:53:54,100 - DEBUG - [atrace:87] - close.started
+2025-11-23 22:53:54,101 - DEBUG - [atrace:87] - close.complete
+2025-11-23 22:53:54,101 - WARNING - [call_llm:351] - [LLM] Rate limited (429). Retry 4/5 after 17s backoff
+2025-11-23 22:53:54,101 - INFO - [call_llm:352] - [LLM] Sleeping for 17 seconds before retry...
+2025-11-23 22:54:11,101 - INFO - [call_llm:354] - [LLM] Retry 4 starting now...
+2025-11-23 22:54:11,102 - DEBUG - [call_llm:320] - [LLM] Attempt 5/6
+2025-11-23 22:54:11,102 - DEBUG - [call_llm:322] - [LLM] Creating async client with 120s timeout
+2025-11-23 22:54:11,120 - DEBUG - [call_llm:324] - [LLM] Sending request to https://aipipe.org/openrouter/v1/chat/completions
+2025-11-23 22:54:11,121 - INFO - [call_llm:325] - [LLM] Waiting for LLM response (this may take several seconds)...
+2025-11-23 22:54:11,121 - DEBUG - [atrace:87] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=120.0 socket_options=None
+2025-11-23 22:54:11,134 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c79250>
+2025-11-23 22:54:11,134 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x103a2bad0> server_hostname='aipipe.org' timeout=120.0
+2025-11-23 22:54:11,148 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103cb96d0>
+2025-11-23 22:54:11,149 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 22:54:11,149 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-23 22:54:11,149 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 22:54:11,149 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-23 22:54:11,150 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 22:54:11,325 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sun, 23 Nov 2025 17:24:11 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'59'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=45CELfq8iEOzoEbyD9mwISXdmPkJQF91NfP2jTq%2BW0crnAWBFJiU6ltv%2FmLB5JCr8KolYibVmMdyrBjcfDkeS00U5Jy58EwgAlU%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a325bd20d1cdc7f-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 22:54:11,326 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 22:54:11,326 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-23 22:54:11,327 - DEBUG - [atrace:87] - response_closed.started
+2025-11-23 22:54:11,327 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-23 22:54:11,327 - INFO - [call_llm:342] - [LLM] Received response with status 429
+2025-11-23 22:54:11,327 - DEBUG - [atrace:87] - close.started
+2025-11-23 22:54:11,328 - DEBUG - [atrace:87] - close.complete
+2025-11-23 22:54:11,328 - WARNING - [call_llm:351] - [LLM] Rate limited (429). Retry 5/5 after 33s backoff
+2025-11-23 22:54:11,328 - INFO - [call_llm:352] - [LLM] Sleeping for 33 seconds before retry...
+2025-11-23 22:54:44,329 - INFO - [call_llm:354] - [LLM] Retry 5 starting now...
+2025-11-23 22:54:44,330 - DEBUG - [call_llm:320] - [LLM] Attempt 6/6
+2025-11-23 22:54:44,331 - DEBUG - [call_llm:322] - [LLM] Creating async client with 120s timeout
+2025-11-23 22:54:44,354 - DEBUG - [call_llm:324] - [LLM] Sending request to https://aipipe.org/openrouter/v1/chat/completions
+2025-11-23 22:54:44,354 - INFO - [call_llm:325] - [LLM] Waiting for LLM response (this may take several seconds)...
+2025-11-23 22:54:44,358 - DEBUG - [atrace:87] - connect_tcp.started host='aipipe.org' port=443 local_address=None timeout=120.0 socket_options=None
+2025-11-23 22:54:44,382 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103cba6c0>
+2025-11-23 22:54:44,383 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x103c45300> server_hostname='aipipe.org' timeout=120.0
+2025-11-23 22:54:44,402 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103c920b0>
+2025-11-23 22:54:44,403 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-23 22:54:44,403 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-23 22:54:44,403 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-23 22:54:44,404 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-23 22:54:44,404 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-23 22:54:44,577 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sun, 23 Nov 2025 17:24:44 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'59'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'access-control-allow-headers', b'Authorization, Content-Type'), (b'access-control-allow-methods', b'GET, POST'), (b'access-control-expose-headers', b'*'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=xPJpJ%2BKKoNpdjvfKa2Xn7sKSaWqx%2B971Fvsovd1jqnd%2FfvV88vVXLGsWHhWwyDka%2FL7MNjFQDMVOd8gySybxWW%2FjfMt%2BjUNJxSk%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a325ca1dc59f43e-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-23 22:54:44,579 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-23 22:54:44,580 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-23 22:54:44,580 - DEBUG - [atrace:87] - response_closed.started
+2025-11-23 22:54:44,580 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-23 22:54:44,581 - INFO - [call_llm:342] - [LLM] Received response with status 429
+2025-11-23 22:54:44,581 - DEBUG - [atrace:87] - close.started
+2025-11-23 22:54:44,581 - DEBUG - [atrace:87] - close.complete
+2025-11-23 22:54:44,582 - ERROR - [call_llm:347] - [LLM] Rate limited after 5 retries. Giving up.
+2025-11-23 22:54:44,582 - ERROR - [process_quiz:829] - [QUIZ] Understanding phase failed
+2025-11-23 22:54:44,582 - ERROR - [process_request:902] - [CHAIN] Quiz failed
+2025-11-23 22:54:44,582 - INFO - [process_request:916] - 
+======================================================================
+2025-11-23 22:54:44,582 - INFO - [process_request:917] - [CHAIN] Completed 0 quizzes in 67.0s
+2025-11-23 22:54:44,582 - INFO - [process_request:918] - ======================================================================
+

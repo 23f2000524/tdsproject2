@@ -1,0 +1,217 @@
+2025-11-25 17:54:12,821 - INFO - [<module>:57] - [INIT] Gemini API configured successfully
+2025-11-25 17:54:12,846 - INFO - [<module>:994] - [START] Quiz Solver Service v6 - Gemini Edition
+2025-11-25 17:54:12,846 - INFO - [<module>:995] - [START] GEMINI_API_KEY configured: True
+2025-11-25 17:54:12,846 - INFO - [<module>:996] - [START] SECRET_KEY configured: True
+2025-11-25 17:54:12,846 - INFO - [<module>:997] - [START] LLM Provider: Google Gemini 2.5 Pro
+2025-11-25 17:54:12,846 - INFO - [<module>:998] - [START] Rate Limits: 15 req/min, 1M tokens/min, 1500 req/day
+2025-11-25 17:54:12,847 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-25 17:54:12,856 - INFO - [_serve:84] - Started server process [30913]
+2025-11-25 17:54:12,857 - INFO - [startup:48] - Waiting for application startup.
+2025-11-25 17:54:12,857 - INFO - [startup:62] - Application startup complete.
+2025-11-25 17:54:12,857 - INFO - [_log_started_message:216] - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-11-25 17:54:16,553 - INFO - [receive_request:946] - [API] POST /receive_request
+2025-11-25 17:54:16,553 - INFO - [receive_request:964] - [API] Valid request for 23f2000524@ds.study.iitm.ac.in
+2025-11-25 17:54:16,553 - INFO - [send:473] - 127.0.0.1:59735 - "POST /receive_request HTTP/1.1" 200
+2025-11-25 17:54:16,553 - INFO - [process_request:899] - 
+======================================================================
+2025-11-25 17:54:16,553 - INFO - [process_request:900] - [CHAIN] Starting for 23f2000524@ds.study.iitm.ac.in
+2025-11-25 17:54:16,553 - INFO - [process_request:901] - [CHAIN] Initial URL: http://tds-llm-analysis.s-anand.net/demo
+2025-11-25 17:54:16,553 - INFO - [process_request:902] - [CHAIN] Extended timeout: 300 seconds (5 minutes)
+2025-11-25 17:54:16,553 - INFO - [process_request:903] - [CHAIN] Using Gemini 2.5 Pro
+2025-11-25 17:54:16,553 - INFO - [process_request:904] - ======================================================================
+
+2025-11-25 17:54:16,553 - INFO - [process_request:920] - [CHAIN] Quiz 1/10 | 0.0s elapsed | 300.0s remaining
+2025-11-25 17:54:16,553 - INFO - [process_quiz:835] - [QUIZ] Starting: http://tds-llm-analysis.s-anand.net/demo
+2025-11-25 17:54:16,553 - DEBUG - [extract_url_params:78] - [CONTEXT] Extracted variables: {'EMAIL': '23f2000524@ds.study.iitm.ac.in'}
+2025-11-25 17:54:16,553 - DEBUG - [process_quiz:840] - [QUIZ] Step 1: Fetch page
+2025-11-25 17:54:16,553 - INFO - [fetch_page:132] - [FETCH] Starting fetch: http://tds-llm-analysis.s-anand.net/demo
+2025-11-25 17:54:16,553 - DEBUG - [fetch_page:137] - [FETCH] Attempting static fetch
+2025-11-25 17:54:16,594 - DEBUG - [atrace:87] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=80 local_address=None timeout=30.0 socket_options=None
+2025-11-25 17:54:16,707 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x10552af90>
+2025-11-25 17:54:16,707 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'GET']>
+2025-11-25 17:54:16,708 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-25 17:54:16,708 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'GET']>
+2025-11-25 17:54:16,708 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-25 17:54:16,708 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-25 17:54:16,741 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 25 Nov 2025 12:24:16 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Xikr0nCyBimANgQ6JV79hMEdAMtmWP%2FE%2BA239WHum2E3x3mVyKWEy7R6bMM0lPQk4s12CcBsYejIzn6DfSeiA4o6fGl0ipbhNzXju4JcUovAKov8AxiabMBeBOs%3D"}]}'), (b'ETag', b'W/"ce08b59240a57c2e963ec19952224928"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a411f415e1cde29-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-25 17:54:16,742 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'GET']>
+2025-11-25 17:54:16,742 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-25 17:54:16,742 - DEBUG - [atrace:87] - response_closed.started
+2025-11-25 17:54:16,742 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-25 17:54:16,742 - DEBUG - [atrace:87] - close.started
+2025-11-25 17:54:16,742 - DEBUG - [atrace:87] - close.complete
+2025-11-25 17:54:16,743 - DEBUG - [fetch_page:142] - [FETCH] Static fetch successful: 336 bytes
+2025-11-25 17:54:16,743 - DEBUG - [process_quiz:846] - [QUIZ] Step 2: Extract data
+2025-11-25 17:54:16,743 - INFO - [extract_data:226] - [EXTRACT] Parsing page data
+2025-11-25 17:54:16,743 - DEBUG - [extract_data:255] - [EXTRACT] Found 0 links
+2025-11-25 17:54:16,743 - DEBUG - [extract_data:269] - [EXTRACT] Found 0 tables
+2025-11-25 17:54:16,743 - DEBUG - [extract_data:289] - [EXTRACT] Found 0 forms
+2025-11-25 17:54:16,743 - DEBUG - [extract_base64_content:189] - [EXTRACT] Searching for base64 encoded content
+2025-11-25 17:54:16,743 - DEBUG - [extract_file_metadata:204] - [EXTRACT] Extracting file metadata
+2025-11-25 17:54:16,743 - DEBUG - [extract_data:298] - [EXTRACT] Found 0 files
+2025-11-25 17:54:16,744 - DEBUG - [process_quiz:849] - [QUIZ] Step 3: First LLM call - Understanding phase
+2025-11-25 17:54:16,744 - INFO - [llm_understand:446] - [LLM_UNDERSTAND] ========== PHASE 1: UNDERSTANDING QUIZ ==========
+2025-11-25 17:54:16,744 - INFO - [llm_understand:447] - [LLM_UNDERSTAND] Sending data to Gemini for analysis...
+2025-11-25 17:54:16,744 - INFO - [llm_understand:489] - [LLM_UNDERSTAND] Calling Gemini 2.5 Pro with 4000 tokens...
+2025-11-25 17:54:16,744 - DEBUG - [call_llm_gemini:315] - [GEMINI] Calling API with max_tokens=4000
+2025-11-25 17:54:16,744 - DEBUG - [call_llm_gemini:341] - [GEMINI] Attempt 1/6
+2025-11-25 17:54:16,744 - INFO - [call_llm_gemini:342] - [GEMINI] ⏳ Sending request to Gemini 2.5 Pro...
+2025-11-25 17:54:16,744 - INFO - [call_llm_gemini:351] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-25 17:54:56,998 - INFO - [call_llm_gemini:354] - [GEMINI] ✓ Received response from Gemini
+2025-11-25 17:54:56,999 - WARNING - [call_llm_gemini:437] - [GEMINI] Error: ValueError: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 2.
+2025-11-25 17:54:56,999 - WARNING - [call_llm_gemini:438] - [GEMINI] Retry 1/5 after 2s
+2025-11-25 17:54:59,000 - DEBUG - [call_llm_gemini:341] - [GEMINI] Attempt 2/6
+2025-11-25 17:54:59,001 - INFO - [call_llm_gemini:342] - [GEMINI] ⏳ Sending request to Gemini 2.5 Pro...
+2025-11-25 17:54:59,001 - INFO - [call_llm_gemini:351] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-25 17:55:31,106 - INFO - [call_llm_gemini:354] - [GEMINI] ✓ Received response from Gemini
+2025-11-25 17:55:31,108 - DEBUG - [call_llm_gemini:367] - [GEMINI] Response content length: 926 chars
+2025-11-25 17:55:31,108 - INFO - [call_llm_gemini:368] - [GEMINI] Response (first 300 chars): ```json
+{
+  "understanding": "The quiz requires sending an HTTP POST request to the `/submit` endpoint on the host `http://tds-llm-analysis.s-anand.net`. The request body must be a JSON object with four keys: `email`, `secret`, `url`, and `answer`. The value for `email` must be substituted with the 
+2025-11-25 17:55:31,109 - DEBUG - [call_llm_gemini:373] - [GEMINI] Removed markdown code blocks
+2025-11-25 17:55:31,109 - DEBUG - [call_llm_gemini:379] - [GEMINI] Attempting to parse JSON response
+2025-11-25 17:55:31,109 - INFO - [call_llm_gemini:381] - [GEMINI] ✓ Successfully parsed JSON response
+2025-11-25 17:55:31,109 - DEBUG - [call_llm_gemini:382] - [GEMINI] Parsed keys: ['understanding', 'needed_steps', 'final_required_action']
+2025-11-25 17:55:31,109 - INFO - [llm_understand:493] - [LLM_UNDERSTAND] ✓ Understanding: The quiz requires sending an HTTP POST request to the `/submit` endpoint on the host `http://tds-llm-analysis.s-anand.net`. The request body must be a
+2025-11-25 17:55:31,109 - INFO - [llm_understand:494] - [LLM_UNDERSTAND] Required steps: 1 steps identified
+2025-11-25 17:55:31,109 - INFO - [llm_understand:495] - [LLM_UNDERSTAND] ========== UNDERSTANDING PHASE COMPLETE ==========
+2025-11-25 17:55:31,109 - DEBUG - [process_quiz:855] - [QUIZ] Step 4: Perform steps if needed
+2025-11-25 17:55:31,110 - DEBUG - [process_quiz:871] - [QUIZ] Step 5: Second LLM call - Solving phase
+2025-11-25 17:55:31,110 - INFO - [llm_solve:665] - [LLM_SOLVE] ========== PHASE 2: SOLVING QUIZ ==========
+2025-11-25 17:55:31,110 - INFO - [llm_solve:666] - [LLM_SOLVE] Sending all data to Gemini for solving...
+2025-11-25 17:55:31,110 - INFO - [llm_solve:742] - [LLM_SOLVE] Calling Gemini 2.5 Pro with 4000 tokens...
+2025-11-25 17:55:31,110 - DEBUG - [call_llm_gemini:315] - [GEMINI] Calling API with max_tokens=4000
+2025-11-25 17:55:31,110 - DEBUG - [call_llm_gemini:341] - [GEMINI] Attempt 1/6
+2025-11-25 17:55:31,111 - INFO - [call_llm_gemini:342] - [GEMINI] ⏳ Sending request to Gemini 2.5 Pro...
+2025-11-25 17:55:31,111 - INFO - [call_llm_gemini:351] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-25 17:55:49,530 - INFO - [call_llm_gemini:354] - [GEMINI] ✓ Received response from Gemini
+2025-11-25 17:55:49,532 - DEBUG - [call_llm_gemini:367] - [GEMINI] Response content length: 1650 chars
+2025-11-25 17:55:49,532 - INFO - [call_llm_gemini:368] - [GEMINI] Response (first 300 chars): ```json
+{
+  "analysis": "The quiz requires constructing a JSON object to be sent via an HTTP POST request. The instructions are provided in the visible text of the initial URL. The text specifies a JSON template with four fields: `email`, `secret`, `url`, and `answer`.\n1.  **email**: The template s
+2025-11-25 17:55:49,532 - DEBUG - [call_llm_gemini:373] - [GEMINI] Removed markdown code blocks
+2025-11-25 17:55:49,532 - DEBUG - [call_llm_gemini:379] - [GEMINI] Attempting to parse JSON response
+2025-11-25 17:55:49,532 - INFO - [call_llm_gemini:381] - [GEMINI] ✓ Successfully parsed JSON response
+2025-11-25 17:55:49,532 - DEBUG - [call_llm_gemini:382] - [GEMINI] Parsed keys: ['analysis', 'answer', 'confidence', 'reasoning', 'requires_navigation']
+2025-11-25 17:55:49,532 - INFO - [llm_solve:769] - [LLM_SOLVE] ✓ Final answer determined: {'email': '23f2000524@ds.study.iitm.ac.in', 'secret': '23f2000524@ds.study.iitm.ac.in', 'url': '/demo', 'answer': 'solution'}
+2025-11-25 17:55:49,532 - INFO - [llm_solve:770] - [LLM_SOLVE] Confidence: 1.0
+2025-11-25 17:55:49,532 - INFO - [llm_solve:771] - [LLM_SOLVE] Analysis: The quiz requires constructing a JSON object to be sent via an HTTP POST request. The instructions are provided in the visible text of the initial URL. The text specifies a JSON template with four fie
+2025-11-25 17:55:49,533 - INFO - [llm_solve:772] - [LLM_SOLVE] ========== SOLVING PHASE COMPLETE ==========
+2025-11-25 17:55:49,533 - DEBUG - [process_quiz:882] - [QUIZ] Step 6: Submit answer
+2025-11-25 17:55:49,533 - INFO - [submit_answer:776] - [SUBMIT] Posting answer to https://tds-llm-analysis.s-anand.net/submit
+2025-11-25 17:55:49,533 - DEBUG - [submit_answer:780] - [SUBMIT] Answer is dict with keys: dict_keys(['email', 'secret', 'url', 'answer'])
+2025-11-25 17:55:49,533 - INFO - [submit_answer:782] - [SUBMIT] Extracting 'answer' field from dict
+2025-11-25 17:55:49,533 - INFO - [submit_answer:797] - [SUBMIT] Payload preview: email=23f2000524@ds.study.iitm.ac.in, url=http://tds-llm-analysis.s-anand.net/demo, answer=solution
+2025-11-25 17:55:49,533 - DEBUG - [submit_answer:798] - [SUBMIT] Secret used: secre...
+2025-11-25 17:55:49,555 - DEBUG - [atrace:87] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=443 local_address=None timeout=30.0 socket_options=None
+2025-11-25 17:55:49,569 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x105615590>
+2025-11-25 17:55:49,569 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x104835f30> server_hostname='tds-llm-analysis.s-anand.net' timeout=30.0
+2025-11-25 17:55:49,593 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1056156d0>
+2025-11-25 17:55:49,594 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'POST']>
+2025-11-25 17:55:49,594 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-25 17:55:49,594 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'POST']>
+2025-11-25 17:55:49,595 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-25 17:55:49,595 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'POST']>
+2025-11-25 17:55:49,834 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 25 Nov 2025 12:25:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Z4xxa16ZNGy8ENZ0KD1TvKCL%2FC7Bb8SRI5k49sPzEfisyr70QDtYyEVRJn9DS7Jg7eSX6QOCv7FKXsCC6AASNdbpffn76G7ie9iEClQSoHCS60XT%2Fmxvj%2BBB%2FJM%3D"}]}'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a412185ebe0b6de-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-25 17:55:49,836 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'POST']>
+2025-11-25 17:55:49,837 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-25 17:55:49,837 - DEBUG - [atrace:87] - response_closed.started
+2025-11-25 17:55:49,837 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-25 17:55:49,838 - DEBUG - [atrace:87] - close.started
+2025-11-25 17:55:49,838 - DEBUG - [atrace:87] - close.complete
+2025-11-25 17:55:49,839 - INFO - [submit_answer:816] - [SUBMIT] ✓ CORRECT
+2025-11-25 17:55:49,839 - INFO - [process_request:920] - [CHAIN] Quiz 2/10 | 93.3s elapsed | 206.7s remaining
+2025-11-25 17:55:49,839 - INFO - [process_quiz:835] - [QUIZ] Starting: https://tds-llm-analysis.s-anand.net/demo-scrape?email=23f2000524%40ds.study.iitm.ac.in&id=8416
+2025-11-25 17:55:49,839 - DEBUG - [extract_url_params:78] - [CONTEXT] Extracted variables: {'EMAIL': '23f2000524@ds.study.iitm.ac.in', 'email': '23f2000524@ds.study.iitm.ac.in', 'ID': '8416', 'id': '8416'}
+2025-11-25 17:55:49,840 - DEBUG - [process_quiz:840] - [QUIZ] Step 1: Fetch page
+2025-11-25 17:55:49,840 - INFO - [fetch_page:132] - [FETCH] Starting fetch: https://tds-llm-analysis.s-anand.net/demo-scrape?email=23f2000524%40ds.study.iitm.ac.in&id=8416
+2025-11-25 17:55:49,840 - DEBUG - [fetch_page:137] - [FETCH] Attempting static fetch
+2025-11-25 17:55:49,858 - DEBUG - [atrace:87] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=443 local_address=None timeout=30.0 socket_options=None
+2025-11-25 17:55:49,867 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1055c8fc0>
+2025-11-25 17:55:49,867 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x104837930> server_hostname='tds-llm-analysis.s-anand.net' timeout=30.0
+2025-11-25 17:55:49,886 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1055c90f0>
+2025-11-25 17:55:49,886 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'GET']>
+2025-11-25 17:55:49,886 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-25 17:55:49,886 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'GET']>
+2025-11-25 17:55:49,886 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-25 17:55:49,887 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-25 17:55:49,909 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 25 Nov 2025 12:25:50 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3J5Q8Bgdp9LHu7ORR4LdjEx02hCsNYqDOsLxcisqtFoq97d6zEFOug8mjjttvB7k0ZcqJlUxMZ08b%2BOCjVJj%2Btre7j2DwQ1tfyd43h027rDObldZaIeb35YAyLo%3D"}]}'), (b'ETag', b'W/"504379483bd9ab9550da5301a3521113"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a412187b97eae8f-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-25 17:55:49,910 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'GET']>
+2025-11-25 17:55:49,910 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-25 17:55:49,910 - DEBUG - [atrace:87] - response_closed.started
+2025-11-25 17:55:49,910 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-25 17:55:49,911 - DEBUG - [atrace:87] - close.started
+2025-11-25 17:55:49,911 - DEBUG - [atrace:87] - close.complete
+2025-11-25 17:55:49,911 - DEBUG - [fetch_page:142] - [FETCH] Static fetch successful: 779 bytes
+2025-11-25 17:55:49,911 - DEBUG - [process_quiz:846] - [QUIZ] Step 2: Extract data
+2025-11-25 17:55:49,911 - INFO - [extract_data:226] - [EXTRACT] Parsing page data
+2025-11-25 17:55:49,913 - DEBUG - [extract_data:255] - [EXTRACT] Found 0 links
+2025-11-25 17:55:49,913 - DEBUG - [extract_data:269] - [EXTRACT] Found 0 tables
+2025-11-25 17:55:49,913 - DEBUG - [extract_data:289] - [EXTRACT] Found 0 forms
+2025-11-25 17:55:49,913 - DEBUG - [extract_base64_content:189] - [EXTRACT] Searching for base64 encoded content
+2025-11-25 17:55:49,914 - DEBUG - [extract_base64_content:196] - [EXTRACT] Decoded: Scrape <a href="/demo-scrape-data?email=$EMAIL">/demo-scrape-data?email=$EMAIL</a> (relative to this
+2025-11-25 17:55:49,914 - INFO - [extract_data:295] - [EXTRACT] Decoded content length: 338
+2025-11-25 17:55:49,914 - DEBUG - [extract_file_metadata:204] - [EXTRACT] Extracting file metadata
+2025-11-25 17:55:49,914 - DEBUG - [extract_data:298] - [EXTRACT] Found 0 files
+2025-11-25 17:55:49,914 - DEBUG - [process_quiz:849] - [QUIZ] Step 3: First LLM call - Understanding phase
+2025-11-25 17:55:49,914 - INFO - [llm_understand:446] - [LLM_UNDERSTAND] ========== PHASE 1: UNDERSTANDING QUIZ ==========
+2025-11-25 17:55:49,914 - INFO - [llm_understand:447] - [LLM_UNDERSTAND] Sending data to Gemini for analysis...
+2025-11-25 17:55:49,914 - INFO - [llm_understand:489] - [LLM_UNDERSTAND] Calling Gemini 2.5 Pro with 4000 tokens...
+2025-11-25 17:55:49,914 - DEBUG - [call_llm_gemini:315] - [GEMINI] Calling API with max_tokens=4000
+2025-11-25 17:55:49,914 - DEBUG - [call_llm_gemini:341] - [GEMINI] Attempt 1/6
+2025-11-25 17:55:49,914 - INFO - [call_llm_gemini:342] - [GEMINI] ⏳ Sending request to Gemini 2.5 Pro...
+2025-11-25 17:55:49,915 - INFO - [call_llm_gemini:351] - [GEMINI] ⏳ WAITING FOR GEMINI TO ANALYZE AND RESPOND...
+2025-11-25 17:56:16,769 - INFO - [call_llm_gemini:354] - [GEMINI] ✓ Received response from Gemini
+2025-11-25 17:56:16,771 - DEBUG - [call_llm_gemini:367] - [GEMINI] Response content length: 1108 chars
+2025-11-25 17:56:16,771 - INFO - [call_llm_gemini:368] - [GEMINI] Response (first 300 chars): ```json
+{
+  "understanding": "The user wants me to solve a multi-step quiz. The first step is to scrape a relative URL provided in the page content: '/demo-scrape-data?email=$EMAIL'. I need to substitute the '$EMAIL' variable with the value from the context. From the content of this new page, I must
+2025-11-25 17:56:16,772 - DEBUG - [call_llm_gemini:373] - [GEMINI] Removed markdown code blocks
+2025-11-25 17:56:16,772 - DEBUG - [call_llm_gemini:379] - [GEMINI] Attempting to parse JSON response
+2025-11-25 17:56:16,772 - INFO - [call_llm_gemini:381] - [GEMINI] ✓ Successfully parsed JSON response
+2025-11-25 17:56:16,772 - DEBUG - [call_llm_gemini:382] - [GEMINI] Parsed keys: ['understanding', 'needed_steps', 'final_required_action']
+2025-11-25 17:56:16,772 - INFO - [llm_understand:493] - [LLM_UNDERSTAND] ✓ Understanding: The user wants me to solve a multi-step quiz. The first step is to scrape a relative URL provided in the page content: '/demo-scrape-data?email=$EMAIL
+2025-11-25 17:56:16,772 - INFO - [llm_understand:494] - [LLM_UNDERSTAND] Required steps: 1 steps identified
+2025-11-25 17:56:16,772 - INFO - [llm_understand:495] - [LLM_UNDERSTAND] ========== UNDERSTANDING PHASE COMPLETE ==========
+2025-11-25 17:56:16,772 - DEBUG - [process_quiz:855] - [QUIZ] Step 4: Perform steps if needed
+2025-11-25 17:56:16,773 - DEBUG - [substitute_variables:91] - [CONTEXT] Substituted '/demo-scrape-data?email=$EMAIL' -> '/demo-scrape-data?email=23f2000524@ds.study.iitm.ac.in'
+2025-11-25 17:56:16,773 - INFO - [perform_step:602] - [PERFORM] Executing: scrape_url -> /demo-scrape-data?email=23f2000524@ds.study.iitm.ac.in
+2025-11-25 17:56:16,773 - INFO - [perform_step:610] - [PERFORM] Scraping: https://tds-llm-analysis.s-anand.net/demo-scrape-data?email=23f2000524@ds.study.iitm.ac.in
+2025-11-25 17:56:16,773 - INFO - [fetch_page:132] - [FETCH] Starting fetch: https://tds-llm-analysis.s-anand.net/demo-scrape-data?email=23f2000524@ds.study.iitm.ac.in
+2025-11-25 17:56:16,773 - DEBUG - [fetch_page:137] - [FETCH] Attempting static fetch
+2025-11-25 17:56:16,794 - DEBUG - [atrace:87] - connect_tcp.started host='tds-llm-analysis.s-anand.net' port=443 local_address=None timeout=30.0 socket_options=None
+2025-11-25 17:56:16,809 - DEBUG - [atrace:87] - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x10556f1d0>
+2025-11-25 17:56:16,809 - DEBUG - [atrace:87] - start_tls.started ssl_context=<ssl.SSLContext object at 0x1055edae0> server_hostname='tds-llm-analysis.s-anand.net' timeout=30.0
+2025-11-25 17:56:16,828 - DEBUG - [atrace:87] - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x1055e29c0>
+2025-11-25 17:56:16,829 - DEBUG - [atrace:87] - send_request_headers.started request=<Request [b'GET']>
+2025-11-25 17:56:16,829 - DEBUG - [atrace:87] - send_request_headers.complete
+2025-11-25 17:56:16,829 - DEBUG - [atrace:87] - send_request_body.started request=<Request [b'GET']>
+2025-11-25 17:56:16,829 - DEBUG - [atrace:87] - send_request_body.complete
+2025-11-25 17:56:16,829 - DEBUG - [atrace:87] - receive_response_headers.started request=<Request [b'GET']>
+2025-11-25 17:56:16,850 - DEBUG - [atrace:87] - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 25 Nov 2025 12:26:16 GMT'), (b'Content-Type', b'text/html'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Cache-Status', b'HIT'), (b'Cache-Control', b'public, max-age=0, must-revalidate'), (b'Nel', b'{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'), (b'Vary', b'accept-encoding'), (b'Report-To', b'{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=YM7X8Um4BuFLuekXc%2F%2F%2Fo%2Byj5d8oP7n6eveDIqtqvirmhy48zeuHM3ipdD9X%2FVbembIhxXuZ10j2tzlNV7I5ajJWjXLIf6XU1faH6LfhXVfQqWlc9pn8lbr8Jm0%3D"}]}'), (b'ETag', b'W/"323597bff13f3f1f00960d8a6047231c"'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'9a4122301ddfde29-DEL'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-11-25 17:56:16,850 - DEBUG - [atrace:87] - receive_response_body.started request=<Request [b'GET']>
+2025-11-25 17:56:16,851 - DEBUG - [atrace:87] - receive_response_body.complete
+2025-11-25 17:56:16,851 - DEBUG - [atrace:87] - response_closed.started
+2025-11-25 17:56:16,852 - DEBUG - [atrace:87] - response_closed.complete
+2025-11-25 17:56:16,852 - DEBUG - [atrace:87] - close.started
+2025-11-25 17:56:16,852 - DEBUG - [atrace:87] - close.complete
+2025-11-25 17:56:16,852 - DEBUG - [fetch_page:142] - [FETCH] Static fetch successful: 79 bytes
+2025-11-25 17:56:16,852 - INFO - [extract_data:226] - [EXTRACT] Parsing page data
+2025-11-25 17:56:16,853 - DEBUG - [extract_data:255] - [EXTRACT] Found 0 links
+2025-11-25 17:56:16,853 - DEBUG - [extract_data:269] - [EXTRACT] Found 0 tables
+2025-11-25 17:56:16,853 - DEBUG - [extract_data:289] - [EXTRACT] Found 0 forms
+2025-11-25 17:56:16,853 - DEBUG - [extract_base64_content:189] - [EXTRACT] Searching for base64 encoded content
+2025-11-25 17:56:16,853 - DEBUG - [extract_file_metadata:204] - [EXTRACT] Extracting file metadata
+2025-11-25 17:56:16,853 - DEBUG - [extract_data:298] - [EXTRACT] Found 0 files
+2025-11-25 17:56:16,853 - WARNING - [perform_step:622] - [PERFORM] Scraped page has no meaningful content
+2025-11-25 17:56:16,853 - ERROR - [process_quiz:861] - [QUIZ] Step failed: scrape_url
+2025-11-25 17:56:16,853 - ERROR - [process_request:926] - [CHAIN] Quiz failed
+2025-11-25 17:56:16,853 - INFO - [process_request:940] - 
+======================================================================
+2025-11-25 17:56:16,853 - INFO - [process_request:941] - [CHAIN] Completed 1 quizzes in 120.3s
+2025-11-25 17:56:16,853 - INFO - [process_request:942] - ======================================================================
+
+2025-11-25 17:56:52,417 - INFO - [shutdown:264] - Shutting down
+2025-11-25 17:56:52,521 - INFO - [shutdown:67] - Waiting for application shutdown.
+2025-11-25 17:56:52,522 - INFO - [shutdown:76] - Application shutdown complete.
+2025-11-25 17:56:52,522 - INFO - [_serve:94] - Finished server process [30913]
