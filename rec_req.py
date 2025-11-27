@@ -936,7 +936,7 @@ async def submit_answer(email: str, secret: str, quiz_url: str, answer: Any, bas
     }
     
     logger.info(f"[SUBMIT] Payload preview: email={email}, url={quiz_url}, answer={actual_answer}")
-    logger.debug(f"[SUBMIT] Secret used: {secret[:5]}..." if secret else "[SUBMIT] No secret")
+    logger.debug(f"[SUBMIT] Secret used:" if secret else "[SUBMIT] No secret")
     
     payload_json = json.dumps(payload)
     if len(payload_json) > 1_000_000:

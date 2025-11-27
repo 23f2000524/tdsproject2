@@ -1,0 +1,13 @@
+2025-11-27 03:40:58,581 - INFO - [<module>:58] - [INIT] Gemini API configured successfully
+2025-11-27 03:40:58,600 - INFO - [<module>:1155] - [START] Quiz Solver Service v6 - Gemini Edition
+2025-11-27 03:40:58,601 - INFO - [<module>:1156] - [START] GEMINI_API_KEY configured: True
+2025-11-27 03:40:58,601 - INFO - [<module>:1157] - [START] SECRET_KEY configured: True
+2025-11-27 03:40:58,601 - INFO - [<module>:1158] - [START] LLM Provider: Google Gemini 2.5 Pro
+2025-11-27 03:40:58,601 - INFO - [<module>:1159] - [START] Rate Limits: 15 req/min, 1M tokens/min, 1500 req/day
+2025-11-27 03:40:58,601 - DEBUG - [__init__:64] - Using selector: KqueueSelector
+2025-11-27 03:40:58,608 - INFO - [_serve:84] - Started server process [72389]
+2025-11-27 03:40:58,608 - INFO - [startup:48] - Waiting for application startup.
+2025-11-27 03:40:58,608 - INFO - [startup:62] - Application startup complete.
+2025-11-27 03:40:58,608 - ERROR - [startup:172] - [Errno 48] error while attempting to bind on address ('127.0.0.1', 8000): [errno 48] address already in use
+2025-11-27 03:40:58,608 - INFO - [shutdown:67] - Waiting for application shutdown.
+2025-11-27 03:40:58,608 - INFO - [shutdown:76] - Application shutdown complete.
