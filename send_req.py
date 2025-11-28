@@ -24,7 +24,7 @@ payload={
 
 }
 
-response = httpx.post("http://localhost:8000/receive_request",json=payload)
+response = httpx.post("https://abdullahmak-tdsproject2.hf.space/receive_request",json=payload)
 
 print("Response status code:",response.status_code)
 print("Response Json:",response.json())
