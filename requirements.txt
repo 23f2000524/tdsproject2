@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+httpx
+python-dotenv
+beautifulsoup4
+playwright
+pandas
+pdfplumber
+pillow
+pytesseract
+google-generativeai

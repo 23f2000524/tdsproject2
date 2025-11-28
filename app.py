@@ -1157,4 +1157,4 @@ if __name__ == '__main__':
     logger.info(f"[START] SECRET_KEY configured: {bool(SECRET_KEY)}")
     logger.info(f"[START] LLM Provider: Google Gemini 2.5 Pro")
     logger.info(f"[START] Rate Limits: 15 req/min, 1M tokens/min, 1500 req/day")
-    uvicorn.run(app, host='127.0.0.1', port=8000, log_config=None)
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 7860)))
